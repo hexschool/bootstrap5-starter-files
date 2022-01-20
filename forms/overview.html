@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>表單</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">表單</h1><small>檔名：<code>overview.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>概觀</h2>
+
+<p>確保在輸入框上使用正確的 <code>type</code> 屬性（例如，<code>email</code> 用於電子郵件地址或 <code>number</code> 用於數字信息），以利用較新的輸入控制，如電子郵件驗證、號碼選擇等。相關內容可參考：<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input</a></p>
+
+<p>完成以下表單範例：</p>
+
+<ul>
+  <li>加上 .form-control, .form-label, .form-text</li>
+  <li>確保 label for 與 input id 有正確對應</li>
+  <li>確保 input type 使用正確</li>
+  <li>確保 button 有正確套用 type</li>
+</ul>
+
+<div class="demo">
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="練習">Email address</label>
+      <input type="email" class="練習" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="練習">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="練習">Password</label>
+      <input type="password" class="練習" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputTel" class="練習">Tel</label>
+      <input type="練習" class="練習" id="exampleInputTel">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button class="btn btn-primary">Button Type 的影響</button>
+  </form>
+</div>
+
+<h2>表單文字</h2>
+
+<p>加上 .form-text（且 id 與 input 屬性的 aria-describedby 進行對應）</p>
+
+<div class="demo">
+  <label for="inputPassword5" class="form-label">Password</label>
+  <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+  <div id="passwordHelpBlock" class="練習">
+  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  </div>
+</div>
+
+<h4>可以使用任何典型的行內 HTML 元素實現行內文字</h4>
+
+<div class="demo">
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">Password</label>
+    </div>
+    <div class="col-auto">
+      <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+    </div>
+    <div class="col-auto">
+      <span id="passwordHelpInline" class="練習">
+        Must be 8-20 characters long.
+      </span>
+    </div>
+  </div>
+</div>
+
+<h2>禁用表格</h2>
+
+<p>為以下表單加上 disabled</p>
+
+<div class="demo">
+  <form>
+    <fieldset 練習>
+      <legend>Disabled fieldset example</legend>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Disabled input</label>
+        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+      </div>
+      <div class="mb-3">
+        <label for="disabledSelect" class="form-label">Disabled select menu</label>
+        <select id="disabledSelect" class="form-select">
+          <option>Disabled select</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+          <label class="form-check-label" for="disabledFieldsetCheck">
+            Can't check this
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/forms/accessibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        網頁親和性
+      </a>
+    
+      <a href="/forms/overview.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        表單
+      </a>
+    
+      <a href="/forms/formControls.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表單控制
+      </a>
+    
+      <a href="/forms/select.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        選擇功能表
+      </a>
+    
+      <a href="/forms/checksRadios.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        核取方塊和選項按鈕
+      </a>
+    
+      <a href="/forms/range.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        範圍
+      </a>
+    
+      <a href="/forms/inputGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Input 群組
+      </a>
+    
+      <a href="/forms/validation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        驗證
+      </a>
+    
+      <a href="/forms/floatingLabels.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        浮動標籤
+      </a>
+    
+      <a href="/forms/layout.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        排版
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

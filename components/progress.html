@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Progress</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Progress</h1><small>檔名：<code>progress.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>How it works</h2>
+<ul>
+  <li>外層使用 <code>.progress</code> 定義結構</li>
+  <li>我們在內層使用 <code>.progress-bar</code> 來指定進度條目前的值。</li>
+</ul>
+
+<div class="demo">
+  <div class="練習">
+    <div class="練習" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
+<p>為以下的 .progress-bar 加上寬度</p>
+
+<div class="demo">
+  <div class="progress" style="margin-top: 16px;">
+    <div class="progress-bar" role="progressbar" 練習 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
+<h2>Labels</h2>
+<p>在 <code>.progress-bar</code> 中放置文字內容</p>
+
+<div class="demo">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+      練習
+    </div>
+  </div>
+</div>
+
+<h2>Height</h2>
+
+<p>為以下 progress 設置高度</p>
+
+<div class="demo">
+  <div class="progress" 練習>
+    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress mt-3" 練習>
+    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
+<h2>Backgrounds</h2>
+
+<p>使用背景色 Utilities 套用不同背景色</p>
+
+<div class="demo">
+  <div class="progress">
+    <div class="progress-bar 練習" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="margin-top: 16px;">
+    <div class="progress-bar 練習" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="margin-top: 16px;">
+    <div class="progress-bar 練習" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="margin-top: 16px;">
+    <div class="progress-bar 練習" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
+<h2>Multiple bars</h2>
+
+<p>一個 .progress 內也可有多個 .progress-bar 已呈現堆疊的效果</p>
+
+<div class="demo">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+    <!-- <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div> -->
+  </div>
+</div>
+
+<h2>Striped</h2>
+
+<p>加入 .progress-bar-striped 至以下範例中以呈現條紋的視覺效果</p>
+
+<div class="demo">
+  <div class="progress">
+    <div class="progress-bar 練習" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="margin-top: 16px;">
+    <div class="progress-bar 練習 bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="margin-top: 16px;">
+    <div class="progress-bar 練習 bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="margin-top: 16px;">
+    <div class="progress-bar 練習 bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="margin-top: 16px;">
+    <div class="progress-bar 練習 bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
+<h2>Animated stripes</h2>
+<p>條紋漸變也可以製成動畫。 將 <code>.progress-bar-animated</code> 加到 <code>.progress-bar</code> 中</p>
+
+<div class="demo">
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped 練習" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+  </div>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/components/component-javascript-intro.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        元件與 JavaScript
+      </a>
+    
+      <a href="/components/accordion.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Accordion
+      </a>
+    
+      <a href="/components/alerts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Alerts
+      </a>
+    
+      <a href="/components/badges.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Badges
+      </a>
+    
+      <a href="/components/breadcrumb.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Breadcrumb
+      </a>
+    
+      <a href="/components/buttons.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Buttons
+      </a>
+    
+      <a href="/components/buttonGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Button group
+      </a>
+    
+      <a href="/components/cards.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Cards
+      </a>
+    
+      <a href="/components/carousel.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Carousel
+      </a>
+    
+      <a href="/components/closeButton.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Close button
+      </a>
+    
+      <a href="/components/collapse.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Collapse
+      </a>
+    
+      <a href="/components/dropdowns.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Dropdowns
+      </a>
+    
+      <a href="/components/listGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        List group
+      </a>
+    
+      <a href="/components/modal.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Modal
+      </a>
+    
+      <a href="/components/navsTabs.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navs and tabs
+      </a>
+    
+      <a href="/components/navbar.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navbar
+      </a>
+    
+      <a href="/components/offcanvas.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Offcanvas
+      </a>
+    
+      <a href="/components/pagination.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Pagination
+      </a>
+    
+      <a href="/components/popovers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Popovers
+      </a>
+    
+      <a href="/components/progress.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Progress
+      </a>
+    
+      <a href="/components/scrollspy.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Scrollspy
+      </a>
+    
+      <a href="/components/spinners.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spinners
+      </a>
+    
+      <a href="/components/toasts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Toasts
+      </a>
+    
+      <a href="/components/tooltips.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Tooltips
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

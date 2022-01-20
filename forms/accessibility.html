@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>網頁親和性</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">網頁親和性</h1><small>檔名：<code>accessibility.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>範例</h2>
+
+<div class="bd-callout bd-callout-warning">
+  <h5 id="幫助文字需要與控制元件相關聯">幫助文字需要與控制元件相關聯</h5>
+  
+  <p>幫助文字應該使用 <code class="highlighter-rouge">aria-describedby</code> 與表單控制元件相關連，這將確保輔助技術（例如螢幕閱讀器）在用戶 focus 或輸入 input 時將了解此幫助文字。</p>
+</div>
+
+<a href="#" aria-label="這只是方便選取的錨點">::</a>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" aria-label="這是一個棒棒的 checkbox">
+  <label class="form-check-label" for="flexCheckDefault">
+    Default checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" aria-label="這是一個棒棒的 Radio" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    Checked checkbox
+  </label>
+</div>
+
+<label for="inputPassword5">假設這是一個密碼</label>
+<input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<small id="passwordHelpBlock" class="form-text text-muted">
+  你的密碼需要 8 - 20 的字元長度，包含文字、數字，但不能有空白及特殊字元在內。
+</small>
+
+
+<hr>
+
+<p>關於 ARIA 的文章：</p>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics">MDN WAI-ARIA基礎</a></li>
+  <li><a href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria?hl=zh-tw">Google ARIA 簡介</a></li>
+</ul>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/forms/accessibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        網頁親和性
+      </a>
+    
+      <a href="/forms/overview.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表單
+      </a>
+    
+      <a href="/forms/formControls.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表單控制
+      </a>
+    
+      <a href="/forms/select.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        選擇功能表
+      </a>
+    
+      <a href="/forms/checksRadios.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        核取方塊和選項按鈕
+      </a>
+    
+      <a href="/forms/range.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        範圍
+      </a>
+    
+      <a href="/forms/inputGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Input 群組
+      </a>
+    
+      <a href="/forms/validation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        驗證
+      </a>
+    
+      <a href="/forms/floatingLabels.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        浮動標籤
+      </a>
+    
+      <a href="/forms/layout.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        排版
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Badges</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Badges</h1><small>檔名：<code>badges.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>範例</h2>
+
+<p>標籤可以運用在標題上</p>
+
+<div class="demo">
+  <h1>Example heading <span class="練習 bg-secondary">New</span></h1>
+  <h2>Example heading <span class="練習 bg-secondary">New</span></h2>
+  <h3>Example heading <span class="練習 bg-secondary">New</span></h3>
+  <h4>Example heading <span class="練習 bg-secondary">New</span></h4>
+  <h5>Example heading <span class="練習 bg-secondary">New</span></h5>
+  <h6>Example heading <span class="練習 bg-secondary">New</span></h6>
+</div>
+
+<h4>標籤可以作為連結或按鈕的一部分</h4>
+
+<div class="demo">
+  <button type="button" class="btn btn-primary">
+    Notifications <span class="練習 bg-secondary">4</span>
+  </button>
+</div>
+
+
+<h2>背景顏色</h2>
+
+<p>可以使用 bg-{情境色} 來調整 badge 的色彩，必要時可加入 text-dark 將文字改為深色</p>
+
+<div class="demo">
+  <span class="badge 練習">Primary</span>
+  <span class="badge 練習">Secondary</span>
+  <span class="badge 練習">Success</span>
+  <span class="badge 練習">Danger</span>
+  <span class="badge bg-warning text-dark">Warning</span>
+  <span class="badge bg-info text-dark">Info</span>
+  <span class="badge bg-light text-dark">Light</span>
+  <span class="badge bg-dark">Dark</span>
+</div>
+
+<h2>膠囊標籤</h2>
+<h6>使用 <code>.rounded-pill</code> 通用類別可以透過 <code>border-radius</code> 使標籤增加圓角。</h6>
+
+<div class="demo">
+  <span class="badge 練習 bg-primary">Primary</span>
+  <span class="badge 練習 bg-secondary">Secondary</span>
+  <span class="badge 練習 bg-success">Success</span>
+  <span class="badge 練習 bg-danger">Danger</span>
+  <span class="badge 練習 bg-warning text-dark">Warning</span>
+  <span class="badge 練習 bg-info text-dark">Info</span>
+  <span class="badge 練習 bg-light text-dark">Light</span>
+  <span class="badge 練習 bg-dark">Dark</span>
+</div>
+
+<h2>定位技巧</h2>
+
+<p>使用通用類別，製作按鈕的額外提示效果</p>
+
+<ul>
+  <li>外層加入：position-relative</li>
+  <li>內層：position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger</li>
+</ul>
+
+<div class="demo">
+  <button type="button" class="btn btn-primary 練習">
+    Inbox
+    <span class="練習">
+      99+
+      <span class="visually-hidden">unread messages</span>
+    </span>
+  </button>
+</div>
+
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/components/component-javascript-intro.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        元件與 JavaScript
+      </a>
+    
+      <a href="/components/accordion.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Accordion
+      </a>
+    
+      <a href="/components/alerts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Alerts
+      </a>
+    
+      <a href="/components/badges.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Badges
+      </a>
+    
+      <a href="/components/breadcrumb.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Breadcrumb
+      </a>
+    
+      <a href="/components/buttons.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Buttons
+      </a>
+    
+      <a href="/components/buttonGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Button group
+      </a>
+    
+      <a href="/components/cards.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Cards
+      </a>
+    
+      <a href="/components/carousel.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Carousel
+      </a>
+    
+      <a href="/components/closeButton.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Close button
+      </a>
+    
+      <a href="/components/collapse.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Collapse
+      </a>
+    
+      <a href="/components/dropdowns.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Dropdowns
+      </a>
+    
+      <a href="/components/listGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        List group
+      </a>
+    
+      <a href="/components/modal.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Modal
+      </a>
+    
+      <a href="/components/navsTabs.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navs and tabs
+      </a>
+    
+      <a href="/components/navbar.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navbar
+      </a>
+    
+      <a href="/components/offcanvas.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Offcanvas
+      </a>
+    
+      <a href="/components/pagination.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Pagination
+      </a>
+    
+      <a href="/components/popovers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Popovers
+      </a>
+    
+      <a href="/components/progress.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Progress
+      </a>
+    
+      <a href="/components/scrollspy.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Scrollspy
+      </a>
+    
+      <a href="/components/spinners.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spinners
+      </a>
+    
+      <a href="/components/toasts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Toasts
+      </a>
+    
+      <a href="/components/tooltips.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Tooltips
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

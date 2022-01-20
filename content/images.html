@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>圖片</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">圖片</h1><small>檔名：<code>images.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>響應式圖片</h2>
+
+<div class="demo">
+  <img src="https://images.unsplash.com/photo-1580912534328-fbc00d6f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80" class="練習" alt="...">
+</div>
+
+<h2>圖片縮略圖</h2>
+<h6>除了我們的 <a href="#">邊框-圓角 通用類別</a> 之外，你可以使用 <code>.img-thumbnail</code> 讓圖片呈現圓角 1px 的邊框。</h6>
+
+<div class="demo">
+  <img src="https://images.unsplash.com/photo-1579613832125-5d34a13ffe2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="練習" alt="..." >
+</div>
+
+<h2>對齊圖片</h2>
+<h6>用 <a href="#">輔助方法 浮動類別</a> 或是 <a href="#">文字 對齊類別</a> 讓圖片對齊。屬性為 <code>block</code> 的圖片可以使用 <a href="#">.mx-auto margin 通用類別</a> 置中。</h6>
+
+<div class="demo">
+  <!-- 使用 clearfix 搭配 float 完成它 -->
+  <div class="練習">
+    <img src="https://images.unsplash.com/photo-1580912534328-fbc00d6f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80" class="rounded 練習" alt="..." style="width: 200px; height: 200px; object-fit: cover;">
+    <img src="https://images.unsplash.com/photo-1591133258306-db968099262d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="rounded 練習" alt="..." style="width: 200px; height: 200px; object-fit: cover;">
+  </div>
+</div>
+
+<div class="demo">
+  <!-- 加入 mx-auto 來置中對齊 -->
+  <img src="https://images.unsplash.com/photo-1591133258306-db968099262d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="rounded 練習 d-block" alt="..." style="width: 200px; height: 200px; object-fit: cover;">
+</div>
+
+<div class="demo">
+  <!-- 使用 text-center 來置中對齊 -->
+  <div class="練習">
+    <img src="https://images.unsplash.com/photo-1527777309916-b59323b01809?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="rounded" alt="..." style="width: 200px; height: 200px; object-fit: cover;">
+  </div>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/content/typography.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        文字排版
+      </a>
+    
+      <a href="/content/images.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        圖片
+      </a>
+    
+      <a href="/content/figures.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        圖片區
+      </a>
+    
+      <a href="/content/tables.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表格
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

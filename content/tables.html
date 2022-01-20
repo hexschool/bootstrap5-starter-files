@@ -1,0 +1,1051 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>表格</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">表格</h1><small>檔名：<code>tables.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+
+<h2>概述</h2>
+<h6>
+  在任何 <code>&lt;table&gt;</code> 加上基本類別
+  <code>.table</code
+  >，接著使用我們的可選修飾類別或是自定義樣式進行擴展。所有表格樣式在 Bootstrap
+  中都不會繼承，意味著巢狀表格的樣式都是獨立於父表格。
+</h6>
+
+<h4>
+  使用最基本的表格排版，以下是基本的 <code>.table</code> 在 Bootstrap 中的外觀。
+</h4>
+
+<div class="demo">
+  <table 練習>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>變數</h2>
+<h6>使用情境 class 給表格列或單元格上色。</h6>
+
+<pre>
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+</pre>
+
+<div class="demo">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Default</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class=練習-primary">
+        <th scope="row">Primary</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr 練習>
+        <th scope="row">Secondary</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr 練習>
+        <th scope="row">Success</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr 練習>
+        <th scope="row">Danger</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr 練習>
+        <th scope="row">Warning</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr 練習>
+        <th scope="row">Info</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr 練習>
+        <th scope="row">Light</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr 練習>
+        <th scope="row">Dark</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>表格強調</h2>
+
+<h4>條紋行</h4>
+<h6>
+  使用 <code>.table-striped</code> 在
+  <code>&lt;tbody&gt;</code> 範圍內任何表格行增加條紋樣式。
+</h6>
+
+<div class="demo">
+  <table class="table 練習">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h6>這些 class 也可以添加到情境色彩中：</h6>
+
+<div class="demo">
+  <table class="table 練習 table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>可滑入行</h2>
+<h6>
+  添加 <code>.table-hover</code> 以便在
+  <code>&lt;tbody&gt;</code> 範圍內的表格行上能夠呈現已滑入的狀態。
+</h6>
+
+<div class="demo">
+  <table class="table 練習">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>同樣可套用在情境色彩上</p>
+
+<div class="demo">
+  <table class="table 練習 table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h6>這些可滑入行也可以和條紋行的變數結合使用。</h6>
+
+<div class="demo">
+  <table class="table 練習 table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>啟用樣式</h2>
+<h6>透過 <code>.table-active</code> 類別突顯表格行或單獨的儲存格。</h6>
+
+<div class="demo">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="練習">
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2" class="table-active">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>表格邊框</h2>
+<h4>帶框的表格</h4>
+<h6>使用 <code>.table-bordered</code> 在表格和儲存格的四邊上添加邊框。</h6>
+
+<div class="demo">
+  <table class="table 練習">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h6><strong>通用類別的邊框顏色</strong> 可以用來改變顏色：</h6>
+
+<p>參考知識：<a href="https://bootstrap5.hexschool.com/docs/5.0/utilities/borders/" target="_blank">https://bootstrap5.hexschool.com/docs/5.0/utilities/borders/</a></p>
+
+<div class="demo">
+  <table class="table table-bordered 練習">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>無框的表格</h4>
+<h6>使用 <code>.table-borderless</code> 使表格呈現無外部邊框。</h6>
+
+<div class="demo">
+  <table class="table 練習">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>小表格</h2>
+<h6>
+  使用 <code>.table-sm</code> 將儲存格 padding 縮減一半的方式讓表格更加精簡。
+</h6>
+
+<div class="demo">
+  <table class="table 練習">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>垂直對齊</h2>
+<h6>
+  <code>&lt;thead&gt;</code> 中的儲存格始終與底部垂直對齊。<code
+    >&lt;tbody&gt;</code
+  >
+  中的儲存格繼承自 <code>&lt;table&gt;</code> 頂部的對齊方式。使用
+  <a href="https://bootstrap5.hexschool.com/docs/5.0/utilities/vertical-align/" target="_blank">垂直對齊</a> 類別在需要的地方重新對齊。
+</h6>
+
+<div class="demo">
+  <table class="table 練習">
+    <thead>
+      <tr>
+        <th scope="col" class="w-25">Heading 1</th>
+        <th scope="col" class="w-25">Heading 2</th>
+        <th scope="col" class="w-25">Heading 3</th>
+        <th scope="col" class="w-25">Heading 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          This cell inherits <code>vertical-align: middle;</code> from the table
+        </td>
+        <td>
+          This cell inherits <code>vertical-align: middle;</code> from the table
+        </td>
+        <td>
+          This cell inherits <code>vertical-align: middle;</code> from the table
+        </td>
+        <td>
+          This here is some placeholder text, intended to take up quite a bit of
+          vertical space, to demonstrate how the vertical alignment works in the
+          preceding cells.
+        </td>
+      </tr>
+      <tr class="align-bottom">
+        <td>
+          This cell inherits <code>vertical-align: bottom;</code> from the table
+          row
+        </td>
+        <td>
+          This cell inherits <code>vertical-align: bottom;</code> from the table
+          row
+        </td>
+        <td>
+          This cell inherits <code>vertical-align: bottom;</code> from the table
+          row
+        </td>
+        <td>
+          This here is some placeholder text, intended to take up quite a bit of
+          vertical space, to demonstrate how the vertical alignment works in the
+          preceding cells.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          This cell inherits <code>vertical-align: middle;</code> from the table
+        </td>
+        <td>
+          This cell inherits <code>vertical-align: middle;</code> from the table
+        </td>
+        <td class="align-top">This cell is aligned to the top.</td>
+        <td>
+          This here is some placeholder text, intended to take up quite a bit of
+          vertical space, to demonstrate how the vertical alignment works in the
+          preceding cells.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>巢狀</h2>
+<h6>巢狀表格不會繼承邊框樣式，啟用樣式以及表格變數。</h6>
+
+<div class="demo">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <table class="練習 mb-0">
+            <thead>
+              <tr>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">A</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+              <tr>
+                <th scope="row">B</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+              <tr>
+                <th scope="row">C</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>結構</h2>
+<h4>表頭</h4>
+<h6>
+  與表格和深色表格類似，使用修飾符類別 <code>.table-light</code> 或
+  <code>.table-dark</code> 使 <code>&lt;thead&gt;</code> 呈現淺灰色或深灰色。
+</h6>
+
+<div class="demo">
+  <table class="table">
+    <thead class="練習">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="demo">
+  <table class="table">
+    <thead class="練習">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>表尾</h4>
+
+<p>為表尾加上 tfoot</p>
+
+<div class="demo">
+  <div class="demo">
+    <table class="table">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+      <練習>
+        <td>Footer</td>
+        <td>Footer</td>
+        <td>Footer</td>
+        <td>Footer</td>
+      </練習>
+    </table>
+  </div>
+</div>
+
+<h4>表格標題</h4>
+<h6>
+  <code>&lt;caption&gt;</code>
+  是一個表格的標題。它可以協助使用螢幕閱讀器的用戶找到表格，了解它的內容，並且決定是否要閱讀它。
+</h6>
+
+<div class="demo">
+  <table class="table">
+    <!--<練習>
+      List of users
+    </練習>-->
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h6>
+  你也可以使用 <code>.caption-top</code> 將
+  <code>&lt;caption&gt;</code> 放在表格的最頂端。
+</h6>
+
+<div class="demo">
+  <table class="table 練習">
+    <caption>
+      List of users
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>響應式表格</h2>
+<h6>
+  響應式表格呈現水平滾動，可以使用 <code>.table-responsive</code> 包覆
+  <code>.table</code> 讓任何響應式表格跨裝置使用。或者
+  <code>.table</code> 中加入
+  <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>
+  創建響應式表格的最大斷點。
+</h6>
+
+<h4>始終呈現響應式</h4>
+<h6><code>.table-responsive</code> 可讓表格水平滾動來跨斷點使用。</h6>
+
+<div class="demo">
+  <div class="練習">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h4>特定斷點</h4>
+<h6>
+  根據需要的響應式表格設定
+  <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code
+  >。從該斷點開始，表格將正常運行並且不會水平滾動。
+</h6>
+<b>這些表格可能會跑版，直到它們的響應樣式應用於特定的視窗寬度。</b>
+
+<div class="demo">
+  <div class="table-responsive-練習">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/content/typography.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        文字排版
+      </a>
+    
+      <a href="/content/images.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        圖片
+      </a>
+    
+      <a href="/content/figures.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        圖片區
+      </a>
+    
+      <a href="/content/tables.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        表格
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

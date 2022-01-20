@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Stretched link</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Stretched link</h1><small>檔名：<code>stretchedLink.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>連結延伸</h2>
+<h6>在一個連結上添加 <code>.stretched-link</code> 將可以使它的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block">containing block</a> 變得可點擊，這是透過 <code>::after</code> 虛擬元素達成的。在大多數的情況下，這意味著本身帶有 <code>position: relative;</code>，且內部包裝了具有 <code>.stretched-link</code> 類別之連結的元素將變得可點擊</h6>
+<h4>在 Bootstrap 中卡片元件預設便帶有 <code>position: relative</code>，因此在這個情況下你可以安全的在卡片中的連結添加 <code>.stretched-link</code>，而無須更改任何其他 HTML。</h4>
+
+<p>為以下連結加入 .stretched-link</p>
+
+<div class="demo">
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1580912534328-fbc00d6f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80" class="card-img-top img-fluid" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">帶有延伸連結的卡片</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary 練習">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
+<h4>大多數自定義的元件並不預設帶有 <code>position: relative</code>，因此必須添加 <code>position: relative</code>，避免連結延伸到父容器以外的地方。</h4>
+
+<p>請確保延伸的外層包含 .position-relative</p>
+
+<div class="demo">
+    <div class="d-flex position-relative">
+        <img src="https://images.unsplash.com/photo-1580912534328-fbc00d6f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80" class="flex-shrink-0 me-3 img-fluid" alt="..." style="width: 144px; height: 144px; object-fit: cover;">
+        <div>
+          <h5 class="mt-0">有延伸連結的自定義元件</h5>
+          <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+          <a href="#" class="stretched-link">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
+<p>請確保延伸的外層包含 .position-relative</p>
+
+<div class="demo">
+    <div class="row g-0 bg-light position-relative">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="https://images.unsplash.com/photo-1580912534328-fbc00d6f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80" class="w-100 img-fluid" alt="...">
+        </div>
+        <div class="col-md-6 p-4 ps-md-0">
+          <h5 class="mt-0">帶有延伸連結的 Columns</h5>
+          <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+          <a href="#" class="stretched-link">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
+<h2>Identifying the containing block</h2>
+<h6>如果延伸連結沒有確實運作，<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block">containing block</a> 將可能是問題所在。以下的 CSS 屬性將使一個元素成為 containing block。</h6>
+
+<ul>
+    <li><code>static</code> 以外的 <code>position</code> 值</li>
+    <li><code>none</code> 以外的 <code>transform</code> 或 <code>perspective</code> 值</li>
+    <li>在 <code>transform</code> 或 <code>perspective</code> 使用 <code>will-change</code> 作為值</li>
+    <li><code>none</code> 以外的 <code>filter</code> 值，或是在 <code>filter</code> 使用 <code>will-change</code> 作為值 (只會在 Firefox 作用)</li>
+</ul>
+
+<div class="demo">
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1580912534328-fbc00d6f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">帶有延伸連結的卡片</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">
+            <a href="#" class="stretched-link text-danger" style="position: relative;">在此延伸連結不會運作，因為 <code>position: relative</code> 被添加在連結上</a>
+          </p>
+          <p class="card-text bg-light" style="transform: rotate(0);">
+            此 <a href="#" class="text-warning stretched-link">延伸連結</a> 只會延伸至 <code>p</code> 標籤, 因為 <code>p</code> 標籤被添加了 transform。</p>
+        </div>
+    </div>
+</div>
+
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/utilities/background.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Background
+      </a>
+    
+      <a href="/utilities/borders.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Borders
+      </a>
+    
+      <a href="/utilities/colors.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Colors
+      </a>
+    
+      <a href="/utilities/display.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Display
+      </a>
+    
+      <a href="/utilities/flex.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Flex
+      </a>
+    
+      <a href="/utilities/float.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Float
+      </a>
+    
+      <a href="/utilities/interactions.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Interactions
+      </a>
+    
+      <a href="/utilities/overflow.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Overflow
+      </a>
+    
+      <a href="/utilities/position.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Position
+      </a>
+    
+      <a href="/utilities/shadows.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Shadows
+      </a>
+    
+      <a href="/utilities/sizing.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Sizing
+      </a>
+    
+      <a href="/utilities/spacing.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spacing
+      </a>
+    
+      <a href="/utilities/text.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Text
+      </a>
+    
+      <a href="/utilities/verticalAlign.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Vertical Alignment
+      </a>
+    
+      <a href="/utilities/visibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Visibility
+      </a>
+    
+      <a href="/utilities/clearfix.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Clearfix
+      </a>
+    
+      <a href="/utilities/coloredLinks.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Colored links
+      </a>
+    
+      <a href="/utilities/ratio.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Ratio
+      </a>
+    
+      <a href="/utilities/visuallyHidden.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Visually hidden
+      </a>
+    
+      <a href="/utilities/stretchedLink.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Helpers: Stretched link
+      </a>
+    
+      <a href="/utilities/textTruncation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Text truncation
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

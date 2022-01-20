@@ -1,0 +1,668 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Flex</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Flex</h1><small>檔名：<code>flex.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<style>
+  .box {
+    background-color: rgba(86,61,124,0.15);
+    border: 1px solid rgba(86,61,124,0.15);
+  }
+  .outer {
+    height: 100px;
+    background-color: rgba(86,61,124,0.15);
+    border: 1px solid rgba(86,61,124,0.15);
+  }
+</style>
+
+<h2>啟用 flex</h2>
+
+<p>flex 包含行內及區塊兩種（大多實戰以區塊為主，行內則較少使用）</p>
+
+<div class="demo">
+  <div class="練習 p-2 box">I'm a flexbox container!</div>
+</div>
+
+<div class="demo">
+  <div class="練習 p-2 box">I'm an inline flexbox container!</div>
+</div>
+
+<h2>方向性</h2>
+
+<h4>使用 <code>.flex-row</code> 來設定水平的方向(瀏覽器預設值)，或是使用 <code>.flex-row-reverse</code> 來作水平方向的反轉。</h4>
+
+<div class="demo">
+  <div class="d-flex 練習 mb-3 box">
+    <div class="p-2 box">Flex item 1</div>
+    <div class="p-2 box">Flex item 2</div>
+    <div class="p-2 box">Flex item 3</div>
+  </div>
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item 1</div>
+    <div class="p-2 box">Flex item 2</div>
+    <div class="p-2 box">Flex item 3</div>
+  </div>
+</div>
+
+<h4>使用 <code>.flex-column</code> 設置垂直方向，或者使用 <code>.flex-column-reverse</code> 作垂直方向的反轉。</h4>
+
+<div class="demo">
+  <div class="d-flex 練習 mb-3 box">
+    <div class="p-2 box">Flex item 1</div>
+    <div class="p-2 box">Flex item 2</div>
+    <div class="p-2 box">Flex item 3</div>
+  </div>
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item 1</div>
+    <div class="p-2 box">Flex item 2</div>
+    <div class="p-2 box">Flex item 3</div>
+  </div>
+</div>
+
+<h2>Justify content</h2>
+
+包含以下的 Justify content 運用方式
+
+<ul>
+  <li><code>justify-content-start</code></li>
+  <li><code>justify-content-end</code></li>
+  <li><code>justify-content-center</code></li>
+  <li><code>justify-content-between</code></li>
+  <li><code>justify-content-around</code></li>
+  <li><code>justify-content-evenly</code></li>
+</ul>
+
+<div class="demo">
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<h2>Align items</h2>
+
+<p>包含以下 align-items 運用方式</p>
+
+<ul>
+  <li><code>.align-items-start</code></li>
+  <li><code>.align-items-end</code></li>
+  <li><code>.align-items-center</code></li>
+  <li><code>.align-items-baseline</code></li>
+  <li><code>.align-items-stretch</code></li>
+</ul>
+
+<div class="demo">
+  <div class="d-flex 練習 outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex 練習 outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<h2>Align self</h2>
+
+<p>內層元素的對齊方式</p>
+
+<ul>
+  <li><code>.align-self-start</code></li>
+  <li><code>.align-self-end</code></li>
+  <li><code>.align-self-center</code></li>
+  <li><code>.align-self-baseline</code></li>
+  <li><code>.align-self-stretch</code></li>
+</ul>
+
+<div class="demo">
+  <div class="d-flex outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="練習 p-2 box">Aligned flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="練習 p-2 box">Aligned flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="練習 p-2 box">Aligned flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="練習 p-2 box">Aligned flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+  <div class="d-flex outer">
+    <div class="p-2 box">Flex item</div>
+    <div class="練習 p-2 box">Aligned flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<h2>Auto margins（重要技巧）</h2>
+
+<p>使用 margin auto 推移區塊</p>
+
+<div class="demo">
+  <div class="d-flex mb-3 box">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+    
+  <div class="d-flex mb-3 box">
+    <div class="練習 p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+    
+  <div class="d-flex mb-3 box">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="練習 p-2 box">Flex item</div>
+  </div>
+</div>
+
+<h4>With align-items</h4>
+
+<div class="demo">
+  <div class="d-flex align-items-start flex-column mb-3 outer" style="height: 200px;">
+    <div class="練習 p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+    
+  <div class="d-flex align-items-end flex-column mb-3 outer" style="height: 200px;">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="練習 p-2 box">Flex item</div>
+  </div>
+</div>
+
+<h2>Wrap</h2>
+<h6>使用 <code>.flex-nowrap</code> 完全不換行 (瀏覽器預設)，使用 <code>.flex-wrap</code> 進行換行，或使用 <code>.flex-wrap-reverse</code> 進行反向換行</h6>
+
+<div class="demo">
+  <div class="d-flex 練習" style="background-color: rgba(86,61,124,0.15); border: 1px solid rgba(86,61,124,0.15); width: 8rem;">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<div class="demo">
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item 1</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<div class="demo">
+  <div class="d-flex 練習 box">
+    <div class="p-2 box">Flex item 1</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<h2>Order</h2>
+<h6><code>order</code> 只能使用從 0 到 5 的整數值，任何額外值則需要自定義的 CSS</h6>
+
+<div class="demo">
+  <div class="d-flex flex-nowrap box">
+    <div class="order-練習 p-2 box">First flex item</div>
+    <div class="order-練習 p-2 box">Second flex item</div>
+    <div class="order-練習 p-2 box">Third flex item</div>
+  </div>
+</div>
+
+<h2>Align content</h2>
+<h6><b>注意！</b> 此特性對於單行的 Flex 項目沒有作用。</h6>
+
+<ul>
+  <li><code>.align-content-start</code></li>
+  <li><code>.align-content-end</code></li>
+  <li><code>.align-content-center</code></li>
+  <li><code>.align-content-around</code></li>
+  <li><code>.align-content-stretch</code></li>
+</ul>
+
+<div class="demo">
+  <div class="d-flex align-content-練習 flex-wrap" style="height: 200px; background-color: rgba(86,61,124,0.15); border: 1px solid rgba(86,61,124,0.15);">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<div class="demo">
+  <div class="d-flex align-content-練習 flex-wrap" style="height: 200px; background-color: rgba(86,61,124,0.15); border: 1px solid rgba(86,61,124,0.15);">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<div class="demo">
+  <div class="d-flex align-content-練習 flex-wrap" style="height: 200px; background-color: rgba(86,61,124,0.15); border: 1px solid rgba(86,61,124,0.15);">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<div class="demo">
+  <div class="d-flex align-content-練習 flex-wrap" style="height: 200px; background-color: rgba(86,61,124,0.15); border: 1px solid rgba(86,61,124,0.15);">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<div class="demo">
+  <div class="d-flex align-content-練習 flex-wrap" style="height: 200px; background-color: rgba(86,61,124,0.15); border: 1px solid rgba(86,61,124,0.15);">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<div class="demo">
+  <div class="d-flex align-content-練習 flex-wrap" style="height: 200px; background-color: rgba(86,61,124,0.15); border: 1px solid rgba(86,61,124,0.15);">
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+    <div class="p-2 box">Flex item</div>
+  </div>
+</div>
+
+<h2>Media object</h2>
+
+<p>加入 flex-row-reverse 為區塊反轉</p>
+
+<div class="demo">
+  <div class="d-flex">
+    <div class="flex-shrink-0">
+      <img src="https://images.unsplash.com/photo-1518577915332-c2a19f149a75?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGdpcmx8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"  alt="...">
+    </div>
+    <div class="flex-grow-1 ms-3">
+      This is some content from a media component. You can replace this with any content and adjust it as needed.
+    </div>
+  </div>
+
+  <div class="d-flex align-items-center 練習">
+    <div class="flex-shrink-0">
+      <img src="https://images.unsplash.com/photo-1518577915332-c2a19f149a75?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGdpcmx8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"  alt="...">
+    </div>
+    <div class="flex-grow-1 ms-3">
+      This is some content from a media component. You can replace this with any content and adjust it as needed.
+    </div>
+  </div>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/utilities/background.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Background
+      </a>
+    
+      <a href="/utilities/borders.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Borders
+      </a>
+    
+      <a href="/utilities/colors.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Colors
+      </a>
+    
+      <a href="/utilities/display.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Display
+      </a>
+    
+      <a href="/utilities/flex.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Flex
+      </a>
+    
+      <a href="/utilities/float.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Float
+      </a>
+    
+      <a href="/utilities/interactions.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Interactions
+      </a>
+    
+      <a href="/utilities/overflow.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Overflow
+      </a>
+    
+      <a href="/utilities/position.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Position
+      </a>
+    
+      <a href="/utilities/shadows.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Shadows
+      </a>
+    
+      <a href="/utilities/sizing.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Sizing
+      </a>
+    
+      <a href="/utilities/spacing.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spacing
+      </a>
+    
+      <a href="/utilities/text.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Text
+      </a>
+    
+      <a href="/utilities/verticalAlign.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Vertical Alignment
+      </a>
+    
+      <a href="/utilities/visibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Visibility
+      </a>
+    
+      <a href="/utilities/clearfix.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Clearfix
+      </a>
+    
+      <a href="/utilities/coloredLinks.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Colored links
+      </a>
+    
+      <a href="/utilities/ratio.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Ratio
+      </a>
+    
+      <a href="/utilities/visuallyHidden.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Visually hidden
+      </a>
+    
+      <a href="/utilities/stretchedLink.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Stretched link
+      </a>
+    
+      <a href="/utilities/textTruncation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Text truncation
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

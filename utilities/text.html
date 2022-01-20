@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Text</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Text</h1><small>檔名：<code>text.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>Text alignment</h2>
+
+<p>加入 text-{start, center, end}</p>
+
+<div class="demo">
+  <p class="練習">Start aligned text on all viewport sizes.</p>
+  <p class="練習">Center aligned text on all viewport sizes.</p>
+  <p class="練習">End aligned text on all viewport sizes.</p>
+</div>
+
+<p>中斷點示範：</p>
+
+<ul>
+  <li>桌面版靠左</li>
+  <li>行動版置中</li>
+</ul>
+
+<div class="demo">
+  <p class="練習">請調整此段文字的對齊</p>
+</div>
+
+<h2>Text wrapping and overflow</h2>
+
+<h4>使用 <code>.text-wrap</code> 類別來斷行文字</h4>
+<div class="demo">
+  <div class="badge bg-primary 練習" style="width: 6rem;">
+    This text should wrap.
+  </div>
+</div>
+
+<h4>可搭配 <code>.text-nowrap</code> 類別防止換行</h4>
+<div class="demo">
+  <div class="練習" style="width: 8rem; background-color: rgba(86,61,124,0.15);">
+    This text should overflow the parent.
+  </div>
+</div>
+
+<h2>Word break</h2>
+
+<h6>使用 <code>.text-break</code> 設定 <code>word-wrap: break-word</code> 和 <code>word-break: break-word</code> 預防長文破壞元件的排版</h6>
+<div class="demo">
+  <p class="練習">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+</div>
+
+<h2>Text transform</h2>
+
+<div class="demo">
+  <p class="text-lowercase">Lowercased text.</p>
+  <p class="text-uppercase">Uppercased text.</p>
+  <p class="text-capitalize">capiTaliZed text.</p>
+</div>
+<h6>請注意 <code>.text-capitalize</code> 只有將第一個字母轉為大寫，而其他字母不受影響</h6>
+
+<h2>Font size</h2>
+
+<p>使用 fs-{ 1-6} 來調整文字大小</p>
+
+<div class="demo">
+  <p class="練習">.fs-1 text</p>
+  <p class="練習">.fs-2 text</p>
+  <p class="練習">.fs-3 text</p>
+  <p class="練習">.fs-4 text</p>
+  <p class="練習">.fs-5 text</p>
+  <p class="練習">.fs-6 text</p>
+</div>
+
+<h2>Font weight and italics</h2>
+<h6><code>font-style</code> 通用類別的縮寫為 <code>.fst-*</code>， <code>font-weight</code> 通用類別的縮寫為 <code>.fw-*</code></h6>
+
+<div class="demo">
+  <p class="fw-bold">Bold text.</p>
+  <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+  <p class="fw-normal">Normal weight text.</p>
+  <p class="fw-light">Light weight text.</p>
+  <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+  <p class="fst-italic">Italic text.</p>
+  <p class="fst-normal">Text with normal font style</p>
+</div>
+
+<h2>Line height</h2>
+
+<div class="demo">
+  <p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+  <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+  <p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+  <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+</div>
+
+<h2>Monospace</h2>
+
+<div class="demo">
+  <p class="font-monospace">This is in monospace</p>
+</div>
+
+<h2>Reset color</h2>
+<h6>使用 <code>.text-reset</code> 來重置一個文字或連結色彩，以便它們繼承父層的顏色</h6>
+
+<div class="demo">
+  <p class="text-muted">
+    Muted text with a <a href="#" class="練習">reset link</a>.
+  </p>
+</div>
+
+<h2>Text decoration</h2>
+
+<p>加入 .text-decoration-{ underline, line-through, none } 改變文字裝飾。</p>
+
+<div class="demo">
+  <p class="練習">This text has a line underneath it.</p>
+  <p class="練習">This text has a line going through it.</p>
+  <a href="#" class="練習">This link has its text decoration removed</a>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/utilities/background.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Background
+      </a>
+    
+      <a href="/utilities/borders.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Borders
+      </a>
+    
+      <a href="/utilities/colors.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Colors
+      </a>
+    
+      <a href="/utilities/display.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Display
+      </a>
+    
+      <a href="/utilities/flex.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Flex
+      </a>
+    
+      <a href="/utilities/float.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Float
+      </a>
+    
+      <a href="/utilities/interactions.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Interactions
+      </a>
+    
+      <a href="/utilities/overflow.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Overflow
+      </a>
+    
+      <a href="/utilities/position.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Position
+      </a>
+    
+      <a href="/utilities/shadows.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Shadows
+      </a>
+    
+      <a href="/utilities/sizing.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Sizing
+      </a>
+    
+      <a href="/utilities/spacing.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spacing
+      </a>
+    
+      <a href="/utilities/text.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Text
+      </a>
+    
+      <a href="/utilities/verticalAlign.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Vertical Alignment
+      </a>
+    
+      <a href="/utilities/visibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Visibility
+      </a>
+    
+      <a href="/utilities/clearfix.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Clearfix
+      </a>
+    
+      <a href="/utilities/coloredLinks.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Colored links
+      </a>
+    
+      <a href="/utilities/ratio.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Ratio
+      </a>
+    
+      <a href="/utilities/visuallyHidden.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Visually hidden
+      </a>
+    
+      <a href="/utilities/stretchedLink.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Stretched link
+      </a>
+    
+      <a href="/utilities/textTruncation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Text truncation
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

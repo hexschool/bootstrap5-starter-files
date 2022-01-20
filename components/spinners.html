@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Spinners</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Spinners</h1><small>檔名：<code>spinners.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>Border spinner</h2>
+
+<p>使用 spinner-border 套用旋轉的讀取效果</p>
+
+<div class="demo">
+  <div class="練習" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<h4>Colors</h4>
+
+<p>使用 text-{情境色} 來套用顏色</p>
+
+<div class="demo">
+  <div class="spinner-border 練習" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+
+<p>原理：顏色是使用 CSS 變數中的 currentColor 來套用文字色彩</p>
+
+<div class="demo">
+  <style>
+    .box {
+      height: 100px;
+      width: 100px;
+      /* background-color: currentColor; */
+    }
+  </style>
+  <div class="box text-primary">
+
+  </div>
+</div>
+
+<h2>Growing spinner</h2>
+
+<p>使用 spinner-grow 放大的讀取效果</p>
+
+<div class="demo">
+  <div class="練習" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<p>使用 text-{情境色} 來套用顏色</p>
+
+<div class="demo">
+  <div class="spinner-grow 練習" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<h2>Alignment</h2>
+<h4>Margin</h4>
+
+<div class="demo">
+  <div class="spinner-border m-5" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<h2>Placement</h2>
+
+<h4>Flex</h4>
+
+<p>水平置中</p>
+<div class="demo">
+  <div class="d-flex 練習">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</div>
+
+<p>垂直置中</p>
+<div class="demo">
+  <div class="d-flex 練習" style="height: 150px;">
+    <strong>Loading...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  </div>
+</div>
+
+<h4>Text align</h4>
+
+<div class="demo">
+  <div class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</div>
+
+<h2>Size</h2>
+<p>增加 <code>.spinner-border-sm</code> 和 <code>.spinner-grow-sm</code> 製作一個較小的讀取圖示</p>
+
+<div class="demo">
+  <div class="spinner-border 練習" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow 練習" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<p>使用自定義 CSS 或 inline 來根據需要更改尺寸，為以下元素加入 style="width: 3rem; height: 3rem;" 的程式碼</p>
+
+<div class="demo">
+  <div class="spinner-border" style="練習" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow" style="練習" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<h2>Buttons</h2>
+
+<p>在按鈕中加入讀取的視覺效果</p>
+
+<div class="demo">
+  <button class="btn btn-primary" type="button" disabled>
+    <!-- <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> -->
+    <span class="visually-hidden">Loading...</span>
+  </button>
+  <button class="btn btn-primary" type="button" disabled>
+    <!-- <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> -->
+    Loading...
+  </button>
+</div>
+
+<div class="demo">
+  <button class="btn btn-primary" type="button" disabled>
+    <!-- <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> -->
+    <span class="visually-hidden">Loading...</span>
+  </button>
+  <button class="btn btn-primary" type="button" disabled>
+    <!-- <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> -->
+    Loading...
+  </button>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/components/component-javascript-intro.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        元件與 JavaScript
+      </a>
+    
+      <a href="/components/accordion.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Accordion
+      </a>
+    
+      <a href="/components/alerts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Alerts
+      </a>
+    
+      <a href="/components/badges.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Badges
+      </a>
+    
+      <a href="/components/breadcrumb.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Breadcrumb
+      </a>
+    
+      <a href="/components/buttons.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Buttons
+      </a>
+    
+      <a href="/components/buttonGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Button group
+      </a>
+    
+      <a href="/components/cards.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Cards
+      </a>
+    
+      <a href="/components/carousel.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Carousel
+      </a>
+    
+      <a href="/components/closeButton.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Close button
+      </a>
+    
+      <a href="/components/collapse.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Collapse
+      </a>
+    
+      <a href="/components/dropdowns.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Dropdowns
+      </a>
+    
+      <a href="/components/listGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        List group
+      </a>
+    
+      <a href="/components/modal.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Modal
+      </a>
+    
+      <a href="/components/navsTabs.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navs and tabs
+      </a>
+    
+      <a href="/components/navbar.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navbar
+      </a>
+    
+      <a href="/components/offcanvas.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Offcanvas
+      </a>
+    
+      <a href="/components/pagination.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Pagination
+      </a>
+    
+      <a href="/components/popovers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Popovers
+      </a>
+    
+      <a href="/components/progress.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Progress
+      </a>
+    
+      <a href="/components/scrollspy.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Scrollspy
+      </a>
+    
+      <a href="/components/spinners.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Spinners
+      </a>
+    
+      <a href="/components/toasts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Toasts
+      </a>
+    
+      <a href="/components/tooltips.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Tooltips
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

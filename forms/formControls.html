@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>表單控制</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">表單控制</h1><small>檔名：<code>formControls.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>範例</h2>
+
+<p>為表單加上 .form-control</p>
+
+<div class="demo">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="練習" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="練習" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</div>
+
+<h2>尺寸</h2>
+
+<p>為表單加上 .form-control-{ sm, lg} 等不同尺寸</p>
+
+<div class="demo">
+  <input class="form-control 練習 mb-2" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+  <input class="form-control mb-2" type="text" placeholder="Default input" aria-label="default input example">
+  <input class="form-control 練習" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
+</div>
+
+<h2>禁用</h2>
+
+<p>為表單加上 disabled 屬性</p>
+
+<div class="demo">
+  <input class="form-control mb-2" type="text" placeholder="Disabled input" value="Disabled input" aria-label="Disabled input example" 練習>
+  <input class="form-control" type="text" placeholder="Disabled readonly input" value="Disabled readonly input" aria-label="Disabled input example" 練習 readonly>
+</div>
+
+<h2>僅能閱讀</h2>
+
+<p>為表單加上 readonly 屬性</p>
+
+<div class="demo">
+  <input class="form-control" type="text" value="Readonly input here..." placeholder="Readonly input here..." aria-label="readonly input example" 練習>
+</div>
+
+<h2>僅能閱讀的文本</h2>
+
+<p>為 input 套用 readonly 及加上 .form-control-plaintext 樣式</p>
+
+<div class="demo">
+  <div class="mb-3 row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="練習" id="staticEmail" value="email@example.com">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword">
+    </div>
+  </div>
+</div>
+
+<div class="demo">
+  <form class="row g-3">
+    <div class="col-auto">
+      <label for="staticEmail2" class="visually-hidden">Email</label>
+      <input type="text" readonly class="練習" id="staticEmail2" value="email@example.com">
+    </div>
+    <div class="col-auto">
+      <label for="inputPassword2" class="visually-hidden">Password</label>
+      <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+    </div>
+  </form>
+</div>
+
+<h2>檔案 input</h2>
+
+<div class="demo">
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Default file input example</label>
+    <input class="form-control" type="file" id="formFile">
+  </div>
+  <div class="mb-3">
+    <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+    <input class="form-control" type="file" id="formFileMultiple" multiple>
+  </div>
+  <div class="mb-3">
+    <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+    <input class="form-control" type="file" id="formFileDisabled" disabled>
+  </div>
+  <div class="mb-3">
+    <label for="formFileSm" class="form-label">Small file input example</label>
+    <input class="form-control form-control-sm" id="formFileSm" type="file">
+  </div>
+  <div>
+    <label for="formFileLg" class="form-label">Large file input example</label>
+    <input class="form-control form-control-lg" id="formFileLg" type="file">
+  </div>
+</div>
+
+<h2>顏色</h2>
+
+<p>為 input 加上 .form-control-color 樣式</p>
+
+<div class="demo">
+  <label for="exampleColorInput" class="form-label">Color picker</label>
+  <input type="color" class="form-control 練習" id="exampleColorInput" value="#00aaff" title="Choose your color">
+</div>
+
+<h2>資料清單</h2>
+
+<p>資料清單允許你創造一組可以在 input 內部被存取 (並自動補齊) 的 <code>&lt;option&gt;</code>。它們跟 <code>&lt;select&gt;</code> 元素很相似，但是在樣式設定上具有更多限制與差異。雖然大部分的瀏覽器和作業系統都包含一些對於 <code>&lt;datalist&gt;</code> 元素的支持，但他們的樣式充其量是不一致的。</p>
+
+<ol>
+  <li>建立 datalist 結構（包含 datalist 及 option 元素）</li>
+  <li>datalist 補上 id，並與 input list 屬性進行對應</li>
+</ol>
+
+<div class="demo">
+  <label for="exampleDataList" class="form-label">Datalist example</label>
+  <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+  <!-- <datalist id="datalistOptions">
+    <option value="San Francisco">
+    <option value="New York">
+    <option value="Seattle">
+    <option value="Los Angeles">
+    <option value="Chicago">
+  </datalist> -->
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/forms/accessibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        網頁親和性
+      </a>
+    
+      <a href="/forms/overview.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表單
+      </a>
+    
+      <a href="/forms/formControls.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        表單控制
+      </a>
+    
+      <a href="/forms/select.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        選擇功能表
+      </a>
+    
+      <a href="/forms/checksRadios.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        核取方塊和選項按鈕
+      </a>
+    
+      <a href="/forms/range.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        範圍
+      </a>
+    
+      <a href="/forms/inputGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Input 群組
+      </a>
+    
+      <a href="/forms/validation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        驗證
+      </a>
+    
+      <a href="/forms/floatingLabels.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        浮動標籤
+      </a>
+    
+      <a href="/forms/layout.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        排版
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2022/01/20</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>
