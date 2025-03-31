@@ -1,0 +1,370 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Position</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Position</h1><small>檔名：<code>position.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<style>
+  .box {
+    width: 2rem; height: 2rem; border-radius: 0.25rem; background-color: #212529;
+  }
+</style>
+
+<h2>Arrange elements</h2>
+<h6>格式為 <code>{property}-{position}</code></h6>
+<h6><em>property</em> 為以下的其中一種:</h6>
+<ul>
+  <li><code>top</code></li>
+  <li><code>start</code></li>
+  <li><code>bottom</code></li>
+  <li><code>end</code></li>
+</ul>
+<h6><em>position</em> 為以下的其中一種:</h6>
+<ul>
+  <li><code>0 - 0</code></li>
+  <li><code>50 - 50%</code></li>
+  <li><code>100 - 100%</code></li>
+</ul>
+
+<p>你可以為元素加上 position-absolute, position-relative 改變定位形式，同時可透過 {property}-{position} 的形式加上定位</p>
+
+<div class="demo p-5">
+  <div class="練習" style="height: 200px; background-color: #F5F5F5;">
+    <div class="練習 box"></div>
+  </div>
+</div>
+
+<h2>Center elements</h2>
+<h4>可以透過轉換通用類別 <code>.translate-middle</code> 將元素置中</h4>
+
+<div class="demo p-5">
+  <div class="position-relative" style="height: 200px; background-color: #F5F5F5;">
+    <div class="position-absolute top-0 start-0 練習 box"></div>
+    <div class="position-absolute top-0 start-50 練習 box"></div>
+    <div class="position-absolute top-0 start-100 練習 box"></div>
+    <div class="position-absolute top-50 start-0 練習 box"></div>
+    <div class="position-absolute top-50 start-50 練習 box"></div>
+    <div class="position-absolute top-50 start-100 練習 box"></div>
+    <div class="position-absolute top-100 start-0 練習 box"></div>
+    <div class="position-absolute top-100 start-50 練習 box"></div>
+    <div class="position-absolute top-100 start-100 練習 box"></div>
+  </div>
+</div>
+
+<h4>透過添加 <code>.translate-middle-x</code> 或 <code>.translate-middle-y</code> 類別，元素將只能在水平或垂直方向上定位。</h4>
+
+<div class="demo p-5">
+  <div class="position-relative" style="height: 200px; background-color: #F5F5F5;">
+    <div class="position-absolute top-0 start-0 box"></div>
+    <div class="position-absolute top-0 start-50 練習 box"></div>
+    <div class="position-absolute top-0 end-0 box"></div>
+    <div class="position-absolute top-50 start-0 練習 box"></div>
+    <div class="position-absolute top-50 start-50 translate-middle box"></div>
+    <div class="position-absolute top-50 end-0 練習 box"></div>
+    <div class="position-absolute bottom-0 start-0 box"></div>
+    <div class="position-absolute bottom-0 start-50 練習 box"></div>
+    <div class="position-absolute bottom-0 end-0 box"></div>
+  </div>
+</div>
+
+<h2>Examples</h2>
+
+<p>練習將以下範例，如同文件的方式呈現</p>
+
+<div class="demo d-flex justify-content-around py-3">
+  <button type="button" class="btn btn-primary position-relative">
+    Mails <span class="position-absolute 練習 badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span></span>
+  </button>
+    
+  <button type="button" class="btn btn-dark position-relative">
+    Marker <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute 練習 mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+  </button>
+    
+  <button type="button" class="btn btn-primary position-relative">
+    Alerts <span class="position-absolute 練習 badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
+  </button>
+</div>
+
+<h4>可以將這些類別與現有的元件結合使用，創造新的元件。請記得你可以透過在 <code>$position-values</code> 變數添加實體以擴展它的功能。</h4>
+
+<p>練習將以下範例，如同文件的方式呈現</p>
+
+<div class="demo">
+  <div class="position-relative m-4">
+    <div class="progress" style="height: 1px;">
+      <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <button type="button" class="position-absolute 練習 btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">1</button>
+    <button type="button" class="position-absolute 練習 btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">2</button>
+    <button type="button" class="position-absolute 練習 btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
+  </div>
+</div>
+
+<h2>Fixed top</h2>
+<h6>將元素固定在螢幕的頂端 <code>.fixed-top</code></h6>
+
+<div class="demo">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-text">
+        Navbar text with an inline element
+      </span>
+    </div>
+  </nav>
+</div>
+
+<h2>Fixed bottom</h2>
+<h6>將元素固定在螢幕的底部 <code>.fixed-bottom</code></h6>
+
+<div class="demo">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-text">
+        Navbar text with an inline element
+      </span>
+    </div>
+  </nav>
+</div>
+
+<h2>Sticky top</h2>
+
+<div class="demo" style="height: 800px;">
+  <div class="row h-100">
+    <div class="col-4">
+      <ul class="list-group 練習">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul>
+    </div>
+    <div class="col-8">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis accusantium voluptatum possimus dolorum praesentium debitis. Libero excepturi fugiat rem ducimus quod illo distinctio tempora nulla temporibus placeat ut, dolorum unde.
+      Architecto suscipit ullam et consequuntur quae expedita deleniti doloremque! Aperiam inventore in culpa eveniet. Delectus enim odit dignissimos reiciendis velit sint commodi exercitationem ut quasi non. Facilis ea incidunt quis.
+      Iste, debitis modi. Praesentium ipsum repellat quas eligendi similique nisi numquam sapiente architecto odit vero magnam sint beatae rem consequatur soluta, aspernatur, nostrum, quam quod? Sint ab debitis laudantium deleniti.</p>
+    </div>
+  </div>
+</div>
+
+<h6>只有在滾動離開該元素之後才會執行。 <code>.sticky-top</code> 通用類別使用 CSS 的 <code>position: sticky</code>，並非所有瀏覽器都完全支持</h6>
+
+<h2>Responsive sticky top</h2>
+<h6><code>.sticky-top</code> 通用類別也支持響應式變化</h6>
+<ul>
+  <li><code>sticky-sm-top</code></li>
+  <li><code>sticky-md-top</code></li>
+  <li><code>sticky-lg-top</code></li>
+  <li><code>sticky-xl-top</code></li>
+</ul>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/utilities/background.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Background
+      </a>
+    
+      <a href="/utilities/borders.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Borders
+      </a>
+    
+      <a href="/utilities/colors.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Colors
+      </a>
+    
+      <a href="/utilities/display.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Display
+      </a>
+    
+      <a href="/utilities/flex.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Flex
+      </a>
+    
+      <a href="/utilities/float.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Float
+      </a>
+    
+      <a href="/utilities/interactions.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Interactions
+      </a>
+    
+      <a href="/utilities/overflow.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Overflow
+      </a>
+    
+      <a href="/utilities/position.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Position
+      </a>
+    
+      <a href="/utilities/shadows.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Shadows
+      </a>
+    
+      <a href="/utilities/sizing.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Sizing
+      </a>
+    
+      <a href="/utilities/spacing.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spacing
+      </a>
+    
+      <a href="/utilities/text.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Text
+      </a>
+    
+      <a href="/utilities/verticalAlign.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Vertical Alignment
+      </a>
+    
+      <a href="/utilities/visibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Visibility
+      </a>
+    
+      <a href="/utilities/clearfix.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Clearfix
+      </a>
+    
+      <a href="/utilities/coloredLinks.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Colored links
+      </a>
+    
+      <a href="/utilities/ratio.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Ratio
+      </a>
+    
+      <a href="/utilities/visuallyHidden.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Visually hidden
+      </a>
+    
+      <a href="/utilities/stretchedLink.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Stretched link
+      </a>
+    
+      <a href="/utilities/textTruncation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Helpers: Text truncation
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.1/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>jQuery 呼叫 Bootstrap 方法</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">jQuery 呼叫 Bootstrap 方法</h1><small>檔名：<code>jquery-bs-methods.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>十年不敗 jQuery</h2>
+
+<div class="demo">
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Hello, world! This is a toast message.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 首先：一定要記得載入 jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script>
+
+</script>
+
+
+<div class="demo">
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+    Tooltip on top
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+    Tooltip on right
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+    Tooltip on left
+  </button>
+</div>
+
+<script>
+
+</script>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/bs-javascript/js-intro.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Bootstrap JS 啟用方法
+      </a>
+    
+      <a href="/bs-javascript/js-init.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        建立實體方法
+      </a>
+    
+      <a href="/bs-javascript/options-methods-events.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        選項、方法、事件
+      </a>
+    
+      <a href="/bs-javascript/jquery-bs-methods.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        jQuery 呼叫 Bootstrap 方法
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.1/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

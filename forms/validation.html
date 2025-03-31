@@ -1,0 +1,490 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>驗證</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">驗證</h1><small>檔名：<code>validation.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>自定義樣式</h2>
+<h6>為了自定義 Bootstrap 表單驗證訊息，您需要將布林屬性 <code>novalidate</code> 添加到 <code>&lt;form&gt;</form></code> 中。這將會禁用瀏覽器預設的回饋工具提示，不過 JavaScript 的表單驗證 API 依然有效。</h6>
+
+<p>如何啟用 JavaScript 驗證</p>
+<ol>
+  <li>表單加入 novalidate 屬性</li>
+  <li>表單加入 needs-validation className(名稱可自訂)</li>
+  <li>加入 valid-feedback, invalid-feedback 回應結果</li>
+  <li>加入 JavaScript 驗證片段程式碼</li>
+</ol>
+
+<div class="demo">
+  <form class="row g-3 練習" 練習>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+      <!-- <div class="valid-feedback">
+        Looks good!
+      </div> -->
+      <!-- <div class="invalid-feedback">
+        Looks bad!
+      </div> -->
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">@</span>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">City</label>
+      <input type="text" class="form-control" id="validationCustom03" required>
+      <!-- <div class="invalid-feedback">
+        Please provide a valid city.
+      </div> -->
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom04" class="form-label">State</label>
+      <select class="form-select" id="validationCustom04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="validationCustom05" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
+
+
+<h2>瀏覽器預設值</h2>
+
+<p>瀏覽器本身就存在著預設驗證功能，但這並不會調整任何樣式</p>
+
+<div class="demo">
+  <form class="row g-3">
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefaultUsername" class="form-label">Username</label>
+      <div class="input-group">
+        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationDefault03" class="form-label">City</label>
+      <input type="text" class="form-control" id="validationDefault03" required>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefault04" class="form-label">State</label>
+      <select class="form-select" id="validationDefault04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefault05" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="validationDefault05" required>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+        <label class="form-check-label" for="invalidCheck2">
+          Agree to terms and conditions
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
+
+<h2>伺服器端</h2>
+
+<p>伺服器端意味著手動加入回饋樣式，回饋樣式包含：</p>
+
+<ul>
+  <li>is-valid, is-invalid</li>
+  <li>valid-feedback, invalid-feedback</li>
+</ul>
+
+<div class="demo">
+  <form class="row g-3">
+    <div class="col-md-4">
+      <label for="validationServer01" class="form-label">First name</label>
+      <input type="text" class="form-control 練習" id="validationServer01" value="Mark" required>
+      <div class="練習">
+        Looks good!
+      </div>
+      <div class="練習">
+        Looks bad!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServer02" class="form-label">Last name</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServerUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+        <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationServer03" class="form-label">City</label>
+      <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+      <div id="validationServer03Feedback" class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer04" class="form-label">State</label>
+      <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+      <div id="validationServer04Feedback" class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer05" class="form-label">Zip</label>
+      <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+      <div id="validationServer05Feedback" class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+        <label class="form-check-label" for="invalidCheck3">
+          Agree to terms and conditions
+        </label>
+        <div id="invalidCheck3Feedback" class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
+
+<h2>支持的元素</h2>
+
+<ul>
+  <li><code>&lt;input&gt;</code> 和帶有 <code>.form-control</code> 的 <code>&lt;textarea&gt;</code> (在 input 群組中最多包含一個 <code>.form-control</code>)</li>
+  <li>帶有 <code>.form-select</code> 的 <code>&lt;select&gt;</code></li>
+  <li><code>.form-check</code></li>
+</ul>
+
+<p>.was-validated 是一個狀態，代表已經驗證過（但驗證狀態還是會依據用戶行為再次調整</p>
+
+<div class="demo">
+  <form class="練習">
+    <div class="mb-3">
+      <label for="validationTextarea" class="form-label">Textarea</label>
+      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+      <div class="invalid-feedback">
+        Please enter a message in the textarea.
+      </div>
+    </div>
+  
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+      <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+      <div class="invalid-feedback">Example invalid feedback text</div>
+    </div>
+  
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+      <label class="form-check-label" for="validationFormCheck2">Toggle this radio</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+      <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
+      <div class="invalid-feedback">More example invalid feedback text</div>
+    </div>
+  
+    <div class="mb-3">
+      <select class="form-select" required aria-label="select example">
+        <option value="">Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <div class="invalid-feedback">Example invalid select feedback</div>
+    </div>
+  
+    <div class="mb-3">
+      <input type="file" class="form-control" aria-label="file example" required>
+      <div class="invalid-feedback">Example invalid form file feedback</div>
+    </div>
+  
+    <div class="mb-3">
+      <button class="btn btn-primary" type="submit" disabled>Submit form</button>
+    </div>
+  </form>
+</div>
+
+<h2>工具提示</h2>
+
+<p>加上 valid-tooltip, invalid-tooltip 加上工具提示的視覺效果</p>
+
+<div class="demo">
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+      <div class="練習">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+      <div class="練習">
+        Looks bad!
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltipUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+        <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">
+          Please choose a unique and valid username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 position-relative">
+      <label for="validationTooltip03" class="form-label">City</label>
+      <input type="text" class="form-control" id="validationTooltip03" required>
+      <div class="invalid-tooltip">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 position-relative">
+      <label for="validationTooltip04" class="form-label">State</label>
+      <select class="form-select" id="validationTooltip04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-tooltip">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 position-relative">
+      <label for="validationTooltip05" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="validationTooltip05" required>
+      <div class="invalid-tooltip">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  // (function () {
+  //   'use strict';
+  
+  //   // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  //   var forms = document.querySelectorAll('.needs-validation');
+  
+  //   // Loop over them and prevent submission
+  //   Array.prototype.slice.call(forms)
+  //     .forEach(function (form) {
+  //     form.addEventListener('submit', function (event) {
+  //       if (!form.checkValidity()) {
+  //         event.preventDefault()
+  //         event.stopPropagation()
+  //       }
+  
+  //       form.classList.add('was-validated')
+  //     }, false)
+  //   })
+  // })()
+</script>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/forms/accessibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        網頁親和性
+      </a>
+    
+      <a href="/forms/overview.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表單
+      </a>
+    
+      <a href="/forms/formControls.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表單控制
+      </a>
+    
+      <a href="/forms/select.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        選擇功能表
+      </a>
+    
+      <a href="/forms/checksRadios.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        核取方塊和選項按鈕
+      </a>
+    
+      <a href="/forms/range.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        範圍
+      </a>
+    
+      <a href="/forms/inputGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Input 群組
+      </a>
+    
+      <a href="/forms/validation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        驗證
+      </a>
+    
+      <a href="/forms/floatingLabels.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        浮動標籤
+      </a>
+    
+      <a href="/forms/layout.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        排版
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.1/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

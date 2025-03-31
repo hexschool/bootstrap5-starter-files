@@ -1,0 +1,524 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>List group</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">List group</h1><small>檔名：<code>listGroup.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>Basic example</h2>
+
+<ul>
+  <li>外層使用 list-group</li>
+  <li>內層使用 list-group-item</li>
+</ul>
+
+<div class="demo">
+  <ul class="練習">
+    <li class="練習">An item</li>
+    <li class="練習">A second item</li>
+    <li class="練習">A third item</li>
+    <li class="練習">A fourth item</li>
+    <li class="練習">And a fifth one</li>
+  </ul>
+</div>
+
+<h2>Active items</h2>
+
+<p>加上 .active 啟用視覺效果</p>
+
+<div class="demo">
+  <ul class="list-group">
+    <li class="list-group-item 練習" aria-current="true">An active item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+</div>
+
+<h2>Disabled items</h2>
+
+<p>加上 disabled 禁用特定項目</p>
+
+<div class="demo">
+  <ul class="list-group">
+    <li class="list-group-item 練習" aria-disabled="true">A disabled item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+</div>
+
+<h2>Links and buttons</h2>
+<p>使用 <code>&lt;a&gt;</code> 或 <code>&lt;button&gt;</code> ，並加入 <code>.list-group-item-action</code> 來創建具有 hover、禁用和啟用狀態的動態列表群組</p>
+<p><b>確保不要在這裡使用標準的 <code>.btn</code></b></p>
+
+<p>將以下結構改為 a 標籤</p>
+
+<div class="demo">
+  <div class="list-group">
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </div>
+</div>
+
+<p>對於 <code>&lt;button&gt;</code>，你也可以使用 disabled 屬性而不是 <code>.disabled</code> class</p>
+
+<div class="demo">
+  <div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+      The current button
+    </button>
+    <button type="button" class="list-group-item list-group-item-action">A second item</button>
+    <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+    <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+    <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+  </div>
+</div>
+
+<h2>Flush</h2>
+
+<p>使用 .list-group-flush 取消外框視覺效果</p>
+
+<div class="demo">
+  <ul class="list-group 練習">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+</div>
+
+<h2>Numbered</h2>
+
+<p>使用 ol 標籤搭配 .list-group-numbered 為項目加上數值</p>
+
+<div class="demo">
+  <ol class="list-group 練習">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Cras justo odio</li>
+  </ol>
+</div>
+
+<p>運用範例</p>
+
+<div class="demo">
+  <ol class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+      <div class="fw-bold">Subheading</div>
+      Cras justo odio
+      </div>
+      <span class="badge bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+      <div class="fw-bold">Subheading</div>
+      Cras justo odio
+      </div>
+      <span class="badge bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+      <div class="fw-bold">Subheading</div>
+      Cras justo odio
+      </div>
+      <span class="badge bg-primary rounded-pill">14</span>
+    </li>
+  </ol>
+</div>
+
+<h2>Horizontal</h2>
+
+<p>使用 list-group-horizontal 及 list-group-horizontal-{中斷點} 將項目改為水平排列</p>
+
+<div class="demo">
+  <ul class="list-group 練習">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <ul class="list-group 練習">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+</div>
+
+<h2>Contextual classes</h2>
+
+<p>使用 .list-group-item-{情境色} 製作不同底色的列表</p>
+
+<div class="demo">
+  <ul class="list-group">
+    <li class="list-group-item">A simple default list group item</li>
+    <li class="list-group-item 練習">A simple primary list group item</li>
+    <li class="list-group-item 練習">A simple secondary list group item</li>
+    <li class="list-group-item 練習">A simple success list group item</li>
+    <li class="list-group-item 練習">A simple danger list group item</li>
+    <li class="list-group-item 練習">A simple warning list group item</li>
+    <li class="list-group-item 練習">A simple info list group item</li>
+    <li class="list-group-item 練習">A simple light list group item</li>
+    <li class="list-group-item 練習">A simple dark list group item</li>
+  </ul>
+</div>
+
+<p>也可以使用 <code>.list-group-item-action</code>。請注意，在前面的範例中不存在 hover 樣式。另外還有支持 <code>.active</code> 狀態，應用它來指示情境列表群組項目上的啟用狀態</p>
+
+<div class="demo">
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+    
+    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+  </div>
+</div>
+
+<h2>With badges</h2>
+
+<p>使用 flex 搭配 badge</p>
+
+<div class="demo">
+  <ul class="list-group">
+    <li class="list-group-item 練習">
+      A list item
+      <span class="badge bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item 練習">
+      A second list item
+      <span class="badge bg-primary rounded-pill">2</span>
+    </li>
+    <li class="list-group-item 練習">
+      A third list item
+      <span class="badge bg-primary rounded-pill">1</span>
+    </li>
+  </ul>
+</div>
+
+<h2>Custom content</h2>
+
+<div class="demo">
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small>3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small>And some small print.</small>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small class="text-muted">And some muted small print.</small>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small class="text-muted">And some muted small print.</small>
+    </a>
+  </div>
+</div>
+
+<h2>Checkboxes and radios</h2>
+<p>可以在不使用 <code>&lt;label&gt;</code> 的情況下使用它們，但請記住要包含 <code>aria-label</code> 以及必要的內容</p>
+
+<div class="demo">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      First checkbox
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      Second checkbox
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      Third checkbox
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      Fourth checkbox
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      Fifth checkbox
+    </li>
+  </ul>
+</div>
+
+<h4>將 <code>&lt;label&gt;</code> 作為 <code>.list-group-item</code> 使用以創造較大的點擊區域</h4>
+
+<div class="demo">
+  <div class="list-group">
+    <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+      First checkbox
+    </label>
+    <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+      Second checkbox
+    </label>
+    <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+      Third checkbox
+    </label>
+    <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+      Fourth checkbox
+    </label>
+    <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+      Fifth checkbox
+    </label>
+  </div>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/components/component-javascript-intro.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        元件與 JavaScript
+      </a>
+    
+      <a href="/components/accordion.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Accordion
+      </a>
+    
+      <a href="/components/alerts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Alerts
+      </a>
+    
+      <a href="/components/badges.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Badges
+      </a>
+    
+      <a href="/components/breadcrumb.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Breadcrumb
+      </a>
+    
+      <a href="/components/buttons.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Buttons
+      </a>
+    
+      <a href="/components/buttonGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Button group
+      </a>
+    
+      <a href="/components/cards.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Cards
+      </a>
+    
+      <a href="/components/carousel.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Carousel
+      </a>
+    
+      <a href="/components/closeButton.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Close button
+      </a>
+    
+      <a href="/components/collapse.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Collapse
+      </a>
+    
+      <a href="/components/dropdowns.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Dropdowns
+      </a>
+    
+      <a href="/components/listGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        List group
+      </a>
+    
+      <a href="/components/modal.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Modal
+      </a>
+    
+      <a href="/components/navsTabs.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navs and tabs
+      </a>
+    
+      <a href="/components/navbar.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navbar
+      </a>
+    
+      <a href="/components/offcanvas.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Offcanvas
+      </a>
+    
+      <a href="/components/pagination.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Pagination
+      </a>
+    
+      <a href="/components/popovers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Popovers
+      </a>
+    
+      <a href="/components/progress.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Progress
+      </a>
+    
+      <a href="/components/scrollspy.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Scrollspy
+      </a>
+    
+      <a href="/components/spinners.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spinners
+      </a>
+    
+      <a href="/components/toasts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Toasts
+      </a>
+    
+      <a href="/components/tooltips.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Tooltips
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.1/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

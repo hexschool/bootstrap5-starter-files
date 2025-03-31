@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Placeholders</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Placeholders</h1><small>檔名：<code>component-placeholder.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+
+<small
+  class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 float-end"
+  >更新自 v5.1</small
+>
+
+<h2>基本範例</h2>
+
+<style>
+  .card-img-top {
+    height: 300px;
+  }
+</style>
+
+<div class="demo">
+  <div class="row row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1741557571786-e922da981949?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="card-img-top object-fit-cover"
+          alt="..."
+        />
+
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card 練習-glow">
+        <img
+          src="https://images.unsplash.com/photo-1741557571786-e922da981949?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="card-img-top object-fit-cover 練習"
+          alt="..."
+        />
+
+        <div class="card-body">
+          <h5 class="card-title 練習">Card title</h5>
+          <p class="card-text 練習">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary placeholder disabled">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mt-5" aria-hidden="true">
+        <div class="練習-glow">
+          <div class="card-img-top object-fit-cover bg-secondary 練習"></div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title 練習-glow">
+            <span class="練習 col-6"></span>
+          </h5>
+          <p class="card-text 練習-glow">
+            <span class="練習 col-7"></span>
+            <span class="練習 col-4"></span>
+            <span class="練習 col-4"></span>
+            <span class="練習 col-6"></span>
+            <span class="練習 col-8"></span>
+          </p>
+          <a
+            class="btn btn-primary disabled 練習 col-6"
+            aria-disabled="true"
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>套用方式</h2>
+
+<div class="demo">
+  <p aria-hidden="true">
+    <span class="練習 col-6"></span>
+  </p>
+
+  <a
+    class="btn btn-primary disabled 練習 col-4"
+    aria-disabled="true"
+  ></a>
+</div>
+
+<h2>動畫</h2>
+
+<div class="demo">
+  <p class="練習-glow">
+    <span class="placeholder col-12"></span>
+  </p>
+
+  <p class="練習-wave">
+    <span class="placeholder col-12"></span>
+  </p>
+</div>
+
+<h2>寬度</h2>
+
+<p>可以使用各種寬度 utilities 或格線</p>
+
+<div class="demo">
+  <span class="placeholder col-6"></span>
+  <span class="placeholder w-75"></span>
+  <span class="placeholder" style="width: 25%"></span>
+</div>
+
+<h2>色彩運用</h2>
+
+<p>可以使用各種色彩 utilities</p>
+
+<pre>
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+</pre>
+
+<div class="demo">
+  <span class="placeholder col-12"></span>
+
+  <span class="placeholder col-12 bg-練習"></span>
+  <span class="placeholder col-12 bg-練習"></span>
+  <span class="placeholder col-12 bg-練習"></span>
+  <span class="placeholder col-12 bg-練習"></span>
+  <span class="placeholder col-12 bg-練習"></span>
+  <span class="placeholder col-12 bg-練習"></span>
+  <span class="placeholder col-12 bg-練習"></span>
+  <span class="placeholder col-12 bg-練習"></span>
+</div>
+
+<h2>尺寸</h2>
+
+<p>可以 lg, sm, xs</p>
+
+<div class="demo">
+  <span class="placeholder col-12 placeholder-練習"></span>
+  <span class="placeholder col-12"></span>
+  <span class="placeholder col-12 placeholder-練習"></span>
+  <span class="placeholder col-12 placeholder-練習"></span>
+</div>
+
+
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/new-feature-5.3/component-placeholder.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Component Placeholder
+      </a>
+    
+      <a href="/new-feature-5.3/updated-component.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        其它元件的更新
+      </a>
+    
+      <a href="/new-feature-5.3/icon-link.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Icon 與 Icon Link
+      </a>
+    
+      <a href="/new-feature-5.3/updated-helpers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        更新的 Helpers
+      </a>
+    
+      <a href="/new-feature-5.3/updated-utilities.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        更新的 Utilities
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.3/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

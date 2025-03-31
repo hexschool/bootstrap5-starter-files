@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Pagination</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Pagination</h1><small>檔名：<code>pagination.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>Overview</h2>
+<p>在外層使用 <code>&lt;nav&gt;</nav></code> 元素讓螢幕閱讀器和其他輔助技術用來識別為導航區塊</p>
+
+<p>分頁結構</p>
+
+<ul>
+  <li>外層 nav 標籤</li>
+  <li>ul 使用 .pagination</li>
+  <li>li 使用 .page-item</li>
+  <li>a 使用 .page-link</li>
+</ul>
+
+<div class="demo">
+  <nav aria-label="Page navigation example">
+    <ul class="練習">
+      <li class="練習"><a class="練習" href="#">Previous</a></li>
+      <li class="練習"><a class="練習" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
+
+<h2>Disabled and active states</h2>
+<p>使用 <code>.disabled</code> 來顯示禁用狀態、 <code>.active</code> 顯示當前頁數</p>
+
+<div class="demo">
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item 練習">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item 練習" aria-current="page">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<p>您可以選擇將 active 或 disabled 的錨點改為 <code>&lt;span&gt;</nav></code>，或是在上一個/下一個箭頭的情況下，省略連結以刪除點擊功能，在保留預期樣式的同時防止鍵盤 focus</p>
+
+<div class="demo">
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <span class="page-link">Previous</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">2</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<h2>Sizing</h2>
+
+<p>使用 pagination-lg, pagination-sm 改變大小</p>
+
+<div class="demo">
+  <nav aria-label="...">
+    <ul class="pagination 練習">
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="demo">
+  <nav aria-label="...">
+    <ul class="pagination 練習">
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+    </ul>
+  </nav>
+</div>
+
+<h2>Alignment</h2>
+
+<p>使用 Utilities 進行對分頁對齊（置中、置右）</p>
+
+<div class="demo">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination 練習">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/components/component-javascript-intro.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        元件與 JavaScript
+      </a>
+    
+      <a href="/components/accordion.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Accordion
+      </a>
+    
+      <a href="/components/alerts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Alerts
+      </a>
+    
+      <a href="/components/badges.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Badges
+      </a>
+    
+      <a href="/components/breadcrumb.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Breadcrumb
+      </a>
+    
+      <a href="/components/buttons.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Buttons
+      </a>
+    
+      <a href="/components/buttonGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Button group
+      </a>
+    
+      <a href="/components/cards.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Cards
+      </a>
+    
+      <a href="/components/carousel.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Carousel
+      </a>
+    
+      <a href="/components/closeButton.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Close button
+      </a>
+    
+      <a href="/components/collapse.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Collapse
+      </a>
+    
+      <a href="/components/dropdowns.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Dropdowns
+      </a>
+    
+      <a href="/components/listGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        List group
+      </a>
+    
+      <a href="/components/modal.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Modal
+      </a>
+    
+      <a href="/components/navsTabs.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navs and tabs
+      </a>
+    
+      <a href="/components/navbar.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navbar
+      </a>
+    
+      <a href="/components/offcanvas.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Offcanvas
+      </a>
+    
+      <a href="/components/pagination.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Pagination
+      </a>
+    
+      <a href="/components/popovers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Popovers
+      </a>
+    
+      <a href="/components/progress.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Progress
+      </a>
+    
+      <a href="/components/scrollspy.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Scrollspy
+      </a>
+    
+      <a href="/components/spinners.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spinners
+      </a>
+    
+      <a href="/components/toasts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Toasts
+      </a>
+    
+      <a href="/components/tooltips.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Tooltips
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.1/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

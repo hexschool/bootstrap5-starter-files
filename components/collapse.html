@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Collapse</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Collapse</h1><small>檔名：<code>collapse.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>Example</h2>
+<p>點擊以下按鈕，透過改變 Class 來顯示及隱藏另一個元素：</p>
+<ul>
+  <li><code>.collapse</code> 隱藏內容。</li>
+  <li><code>.collapsing</code> 會在轉換的過程中被套用。</li>
+  <li><code>.collapse.show</code> 顯示內容。</li>
+</ul>
+
+<p>基本使用方式：</p>
+
+<ul>
+  <li>按鈕加上 data-bs-toggle="collapse"</li>
+  <li>加上 href 或 data-bs-target 來對應項目</li>
+</ul>
+
+<div class="demo">
+  <p>
+    <a class="btn btn-primary" data-bs-toggle="練習" 練習 role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      Link with href
+    </a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="練習" 練習
+      aria-expanded="false" aria-controls="collapseExample">
+      Button with data-bs-target
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the
+      user activates the relevant trigger.
+    </div>
+  </div>
+</div>
+
+<h2>Multiple targets</h2>
+
+<p>id 僅能用來對應單一元素，如果要對應複數元素則可以使用 className</p>
+
+<div class="demo">
+  <p>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="練習" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/components/component-javascript-intro.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        元件與 JavaScript
+      </a>
+    
+      <a href="/components/accordion.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Accordion
+      </a>
+    
+      <a href="/components/alerts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Alerts
+      </a>
+    
+      <a href="/components/badges.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Badges
+      </a>
+    
+      <a href="/components/breadcrumb.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Breadcrumb
+      </a>
+    
+      <a href="/components/buttons.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Buttons
+      </a>
+    
+      <a href="/components/buttonGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Button group
+      </a>
+    
+      <a href="/components/cards.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Cards
+      </a>
+    
+      <a href="/components/carousel.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Carousel
+      </a>
+    
+      <a href="/components/closeButton.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Close button
+      </a>
+    
+      <a href="/components/collapse.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Collapse
+      </a>
+    
+      <a href="/components/dropdowns.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Dropdowns
+      </a>
+    
+      <a href="/components/listGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        List group
+      </a>
+    
+      <a href="/components/modal.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Modal
+      </a>
+    
+      <a href="/components/navsTabs.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navs and tabs
+      </a>
+    
+      <a href="/components/navbar.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navbar
+      </a>
+    
+      <a href="/components/offcanvas.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Offcanvas
+      </a>
+    
+      <a href="/components/pagination.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Pagination
+      </a>
+    
+      <a href="/components/popovers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Popovers
+      </a>
+    
+      <a href="/components/progress.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Progress
+      </a>
+    
+      <a href="/components/scrollspy.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Scrollspy
+      </a>
+    
+      <a href="/components/spinners.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spinners
+      </a>
+    
+      <a href="/components/toasts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Toasts
+      </a>
+    
+      <a href="/components/tooltips.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Tooltips
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.1/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

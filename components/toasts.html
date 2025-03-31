@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Toasts</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Toasts</h1><small>檔名：<code>toasts.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>Overview</h2>
+<ul>
+  <li>出於效能原因吐司是選擇性加入的，所以<b>您必須自己將它們初始化</b>。</li>
+</ul>
+
+<h2>Examples</h2>
+<h4>Basic</h4>
+
+<p>Toast 結構：</p>
+
+<ul>
+  <li>外層包含 .toast</li>
+  <li>內層包含 .toast-header, .toast-body</li>
+  <li>可使用 data-bs-dismiss="toast" 關閉吐司元件</li>
+</ul>
+
+<div class="demo">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+<h4>Live</h4>
+
+<p>實際展示，Toast 需要使用 JavaScript 手動將它開啟，請打開後方 JS 的註解</p>
+
+<div class="demo">
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+    <div id="liveToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Hello, world! This is a toast message.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // document.getElementById("liveToastBtn").onclick = function () {
+  //   var liveToast = document.getElementById("liveToast"); //select id of toast
+  //   var bsToast = new bootstrap.Toast(liveToast); //inizialize it
+  //   bsToast.show(); //show it
+  // };
+</script>
+
+<h4>Translucent</h4>
+
+<p>吐司包含半透明的結構</p>
+
+<div class="demo bg-dark">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+      <strong class="me-auto">Bootstrap</strong>
+      <small class="text-muted">11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+<h4>Stacking</h4>
+<p>透過將吐司包裝於 <code>.toast-container</code> 來推疊</p>
+
+<div class="demo">
+  <div class="練習">
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+        <strong class="me-auto">Bootstrap</strong>
+        <small class="text-muted">just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        See? Just like this.
+      </div>
+    </div>
+  
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+        <strong class="me-auto">Bootstrap</strong>
+        <small class="text-muted">2 seconds ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Heads up, toasts will stack automatically
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>也可以在吐司添加額外的控制項與元件</p>
+
+<div class="demo">
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+      <div class="mt-2 pt-2 border-top">
+        <button type="button" class="btn btn-primary btn-sm">Take action</button>
+        <!-- data-bs-dismiss 一樣可以關閉 Toast -->
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>Color schemes</h4>
+
+<p>一樣可以透過 Utilities 來客製化各種的樣式及色彩</p>
+
+<div class="demo">
+  <div class="toast fade show align-items-center text-white 練習" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Hello, world! This is a toast message.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<h2>Placement</h2>
+
+<p>使用 Utilities 重新調整 Toast 的定位</p>
+
+<div class="demo position-relative">
+  <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts" style="min-height: 240px;">
+    <div class="toast-container position-absolute p-3 練習" id="toastPlacement">
+      <div class="toast fade show">
+        <div class="toast-header">
+          <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>對於會推播更多通知的系統，請考慮使用包裝元素的方式，讓它們可以堆疊顯示</p>
+
+<div class="demo bg-dark" style="min-height: 240px;">
+  <div aria-live="polite" aria-atomic="true" class="position-relative">
+    <!-- Position it: -->
+    <!-- - 加入 `.toast-container` 在 .toast 外層 -->
+    <!-- - 使用 `.position-absolute`, `top-0` & `end-0` 來定位置角落 -->
+    <!-- - 可以使用 `.p-3` 來使 .toast 群組距離邊緣有一些距離 -->
+    <div class="練習">
+  
+      <!-- Then put toasts within -->
+      <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+          <strong class="me-auto">Bootstrap</strong>
+          <small class="text-muted">just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          See? Just like this.
+        </div>
+      </div>
+  
+      <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+          <strong class="me-auto">Bootstrap</strong>
+          <small class="text-muted">2 seconds ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Heads up, toasts will stack automatically
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>還可以使用 flexbox 通用類別來對吐司做水平 和/或 垂直的對齊</p>
+
+<div class="demo bg-dark d-flex" style="min-height: 240px;">
+  <!-- 使用 Flex 做到垂直、水平置中 -->
+  <div aria-live="polite" aria-atomic="true" class="d-flex 練習 w-100">
+
+    <!-- Then put toasts within -->
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="https://bootstrap5.hexschool.com/docs/5.0/assets/brand/bootstrap-logo.svg" class="rounded me-2" alt="..." style="width: 20px; height: 20px; object-fit: cover;">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Hello, world! This is a toast message.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/components/component-javascript-intro.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        元件與 JavaScript
+      </a>
+    
+      <a href="/components/accordion.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Accordion
+      </a>
+    
+      <a href="/components/alerts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Alerts
+      </a>
+    
+      <a href="/components/badges.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Badges
+      </a>
+    
+      <a href="/components/breadcrumb.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Breadcrumb
+      </a>
+    
+      <a href="/components/buttons.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Buttons
+      </a>
+    
+      <a href="/components/buttonGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Button group
+      </a>
+    
+      <a href="/components/cards.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Cards
+      </a>
+    
+      <a href="/components/carousel.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Carousel
+      </a>
+    
+      <a href="/components/closeButton.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Close button
+      </a>
+    
+      <a href="/components/collapse.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Collapse
+      </a>
+    
+      <a href="/components/dropdowns.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Dropdowns
+      </a>
+    
+      <a href="/components/listGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        List group
+      </a>
+    
+      <a href="/components/modal.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Modal
+      </a>
+    
+      <a href="/components/navsTabs.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navs and tabs
+      </a>
+    
+      <a href="/components/navbar.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Navbar
+      </a>
+    
+      <a href="/components/offcanvas.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Offcanvas
+      </a>
+    
+      <a href="/components/pagination.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Pagination
+      </a>
+    
+      <a href="/components/popovers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Popovers
+      </a>
+    
+      <a href="/components/progress.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Progress
+      </a>
+    
+      <a href="/components/scrollspy.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Scrollspy
+      </a>
+    
+      <a href="/components/spinners.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Spinners
+      </a>
+    
+      <a href="/components/toasts.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        Toasts
+      </a>
+    
+      <a href="/components/tooltips.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Tooltips
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.1/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

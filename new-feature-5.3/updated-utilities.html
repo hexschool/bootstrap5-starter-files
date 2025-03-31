@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>更新的 Utilities</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">更新的 Utilities</h1><small>檔名：<code>updated-utilities.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+
+<h3>Link</h3>
+
+<p>連結透明度，加入 <code>.link-opacity-{value}</code>，<code>{value}</code> 可以是 10、25、50、75、100</p>
+</p>
+
+<div class="demo">
+  <p><a class="練習" href="#">Link opacity 10</a></p>
+  <p><a class="練習" href="#">Link opacity 25</a></p>
+  <p><a class="練習" href="#">Link opacity 50</a></p>
+  <p><a class="練習" href="#">Link opacity 75</a></p>
+  <p><a class="練習" href="#">Link opacity 100</a></p>
+</div>
+
+<p>Hover 後賦予透明度，
+  加入 <code>.link-opacity-{value}-hover</code>，<code>{value}</code> 可以是 10、25、50、75、100
+</p>
+
+
+<div class="demo">
+  <p><a class="練習" href="#">Link hover opacity 10</a></p>
+  <p><a class="練習" href="#">Link hover opacity 25</a></p>
+  <p><a class="練習" href="#">Link hover opacity 50</a></p>
+  <p><a class="練習" href="#">Link hover opacity 75</a></p>
+  <p><a class="練習" href="#">Link hover opacity 100</a></p>
+</div>
+
+<p>不同底色的下底線，
+  加入 <code>.link-underline-{color}</code>，<code>{color}</code> 可以是 primary、secondary、success、danger、warning、info、light、dark。
+</p>
+
+<div class="demo">
+  <p><a href="#" class="練習">Primary underline</a></p>
+  <p><a href="#" class="練習">Secondary underline</a></p>
+  <p><a href="#" class="練習">Success underline</a></p>
+  <p><a href="#" class="練習">Danger underline</a></p>
+  <p><a href="#" class="練習">Warning underline</a></p>
+  <p><a href="#" class="練習">Info underline</a></p>
+  <p><a href="#" class="練習">Light underline</a></p>
+  <p><a href="#" class="練習">Dark underline</a></p>
+</div>
+
+<p>下底線向下的位移距離
+  加入 <code>.link-offset-{value}</code>，<code>{value}</code> 可以是 1、2、3
+</p>
+
+<div class="demo">
+  <p><a href="#">Default link</a></p>
+  <p><a class="練習" href="#">Offset 1 link</a></p>
+  <p><a class="練習" href="#">Offset 2 link</a></p>
+  <p><a class="練習" href="#">Offset 3 link</a></p>
+</div>
+
+<p>下底線的透明度，
+  加入 <code>.link-underline-opacity-{value}</code>，<code>{value}</code> 可以是 0、10、25、50、75、100
+</p>
+
+<div class="demo">
+  <p><a class="link-offset-2 link-underline 練習" href="#">Underline opacity 0</a></p>
+  <p><a class="link-offset-2 link-underline 練習" href="#">Underline opacity 10</a></p>
+  <p><a class="link-offset-2 link-underline 練習" href="#">Underline opacity 25</a></p>
+  <p><a class="link-offset-2 link-underline 練習" href="#">Underline opacity 50</a></p>
+  <p><a class="link-offset-2 link-underline 練習" href="#">Underline opacity 75</a></p>
+  <p><a class="link-offset-2 link-underline 練習" href="#">Underline opacity 100</a></p>
+</div>
+
+<p>混合使用，
+  分別套用 <code>.link-offset-{value}</code>、<code>.link-underline-opacity-{value}</code>、<code>.link-underline-opacity-{value}-hover</code>。
+</p>
+
+<div class="demo">
+  <a class="練習 link-offset-3-hover link-underline 練習 練習" href="#">
+    Underline opacity 0
+  </a>
+</div>
+
+<p>連結色彩，
+  加入 <code>.link-{color}</code>，<code>{color}</code> 可以是 primary、secondary、success、danger、warning、info、light、dark、body-emphasis。
+</p>
+
+<div class="demo">
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primary link</a></p>
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Secondary link</a></p>
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Success link</a></p>
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Danger link</a></p>
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Warning link</a></p>
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Info link</a></p>
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Light link</a></p>
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Dark link</a></p>
+  <p><a href="#" class="練習 link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis link</a></p>
+</div>
+
+<h3>Object fit</h3>
+
+<p>
+  Object fit 的功能是讓圖片或影片在容器中進行填滿、覆蓋、等比例縮放等操作。可以在 <code>.object-fit-{value}</code> 中使用 <code>contain</code>、<code>cover</code>、<code>fill</code>、<code>scale</code>、<code>none</code>。
+</p>
+
+<ul>
+  <li>
+    <code>contain</code>：保持原始比例，並完整顯示整個內容，適用於確保完整顯示圖片，而不會被裁切。
+  </li>
+  <li>
+    <code>cover</code>：會填滿整個容器，可能會裁切掉部分內容，適用於背景圖片或視覺設計強調填滿的情境。
+  </li>
+  <li>
+    <code>fill</code>：完全填滿容器，但可能會變形，因為不會保持原始比例。
+  </li>
+  <li>
+    <code>scale</code>：會比較 none 和 contain，選擇較小的尺寸來顯示內容。
+  </li>
+  <li>
+    <code>none</code>：不縮放內容，圖片將按照其原始尺寸呈現。
+  </li>
+</ul>
+
+<div class="demo">
+  <div class="row">
+    <div class="col">
+      <img height="150" width="100%" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="練習 border rounded" alt="...">
+    </div>
+    <div class="col">
+      <img height="150" width="100%" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="練習 border rounded" alt="...">
+    </div>
+    <div class="col">
+      <img height="150" width="100%" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="練習 border rounded" alt="...">
+    </div>
+    <div class="col">
+      <img height="150" width="100%" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="練習 border rounded" alt="...">
+    </div>
+    <div class="col">
+      <img height="150" width="100%" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="練習 border rounded" alt="...">
+    </div>
+  </div>
+</div>
+
+<p>
+  Object fit 的功能也可以搭配 <code>sm</code>、<code>md</code>、<code>lg</code>、<code>xl</code>、<code>xxl</code> 等中斷點進行使用。
+</p>
+
+<div class="demo">
+  <div class="row">
+    <div class="col">
+      <img width="100%" height="150" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-sm-contain border rounded" alt="...">
+    </div>
+    <div class="col">
+      <img width="100%" height="150" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-md-contain border rounded" alt="...">
+    </div>
+    <div class="col">
+      <img width="100%" height="150" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-lg-contain border rounded" alt="...">
+    </div>
+    <div class="col">
+      <img width="100%" height="150" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-xl-contain border rounded" alt="...">
+    </div>
+    <div class="col">
+      <img width="100%" height="150" src="https://images.unsplash.com/photo-1709403343088-732c888fdc6f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-xxl-contain border rounded" alt="...">
+    </div>
+  </div>
+</div>
+
+<p>
+  亦可搭配 video 標籤使用。
+</p>
+
+<div class="demo">
+  <div class="row">
+    <div class="col">
+      <video src="./貓貓搖搖.mp4" loop class="object-fit-練習 border" width="100%" height="150" autoplay></video>
+    </div>
+  </div>
+</div>
+
+
+<h3>Opacity</h3>
+
+<p>透明度，加入 <code>.opacity-{value}</code>，<code>{value}</code> 可以是 100、75、50、25、0</p>
+
+<div class="demo">
+  <div class="d-flex">
+    <div class="練習 p-3 m-2 bg-primary text-light fw-bold rounded">100%</div>
+    <div class="練習 p-3 m-2 bg-primary text-light fw-bold rounded">75%</div>
+    <div class="練習 p-3 m-2 bg-primary text-light fw-bold rounded">50%</div>
+    <div class="練習 p-3 m-2 bg-primary text-light fw-bold rounded">25%</div>
+    <div class="練習 p-3 m-2 bg-primary text-light fw-bold rounded">0%</div>
+  </div>
+</div>
+
+<h3>Z-index</h3>
+
+<p>z-index，加入 <code>.z-{value}</code>，<code>{value}</code> 可以是 -1 ~ 3（- 請用 n 替代）。</p>
+
+<div class="demo position-relative" style="min-height: 15rem;">
+  <div class="練習 position-absolute p-5 rounded-3 z-index-box"><span>z-3</span></div>
+  <div class="練習 position-absolute p-5 rounded-3 z-index-box"><span>z-2</span></div>
+  <div class="練習 position-absolute p-5 rounded-3 z-index-box"><span>z-1</span></div>
+  <div class="練習 position-absolute p-5 rounded-3 z-index-box"><span>z-0</span></div>
+  <div class="練習 position-absolute p-5 rounded-3 z-index-box"><span>z-n1</span></div>
+</div>
+
+<style>
+  .z-index-box {
+    color: var(--bs-body-bg);
+    background-color: var(--bs-bs5);
+    border: 1px solid var(--bs-bs5);
+  }
+  .z-index-box:nth-child(2) {
+    top: 3rem;
+    left: 3rem;
+  }
+  .z-index-box:nth-child(3) {
+    top: 4.5rem;
+    left: 4.5rem;
+  }
+  .z-index-box:nth-child(4) {
+    top: 6rem;
+    left: 6rem;
+  }
+  .z-index-box:nth-child(5) {
+    top: 7.5rem;
+    left: 7.5rem;
+  }
+  .z-index-box span {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+  }
+</style>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/new-feature-5.3/component-placeholder.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Component Placeholder
+      </a>
+    
+      <a href="/new-feature-5.3/updated-component.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        其它元件的更新
+      </a>
+    
+      <a href="/new-feature-5.3/icon-link.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Icon 與 Icon Link
+      </a>
+    
+      <a href="/new-feature-5.3/updated-helpers.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        更新的 Helpers
+      </a>
+    
+      <a href="/new-feature-5.3/updated-utilities.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        更新的 Utilities
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.3/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>

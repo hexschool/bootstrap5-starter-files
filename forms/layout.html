@@ -1,0 +1,452 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>排版</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
+<div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
+<!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">排版</h1><small>檔名：<code>layout.html</code></small></div>
+<!-- 🔥🔥練習開始🔥🔥 -->
+<h2>通用類別</h2>
+
+<p>使用 mb-{ 1-5 } 調整表單間距</p>
+
+<div class="demo">
+  <div class="練習">
+    <label for="formGroupExampleInput" class="form-label">Example label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  </div>
+  <div class="練習">
+    <label for="formGroupExampleInput2" class="form-label">Another label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+  </div>
+</div>
+
+<h2>表單網格</h2>
+
+<p>使用格線系統排版表單</p>
+
+<div class="demo">
+  <div class="練習">
+    <div class="練習">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="練習">
+      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+  </div>
+</div>
+
+<h2>Gutters</h2>
+
+<p>調整表單之間的 gutter</p>
+
+<div class="demo">
+  <div class="row 練習">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+  </div>
+</div>
+
+<h4>可以使用網格 (Grid) 系統建立更複雜的排版。</h4>
+
+<p>使用格線系統，並加入 g-{ 1-5 } 完成複雜的排版</p>
+
+<div class="demo">
+  <form class="row 練習">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
+</div>
+
+<h2>水平表單</h2>
+<h6>透過將 <code>.row</code> 類別加入表單群組來建立使用網格系統的水平表單，並使用 <code>.col-*-*</code> 類別來指定標籤和表單控制 (Form controls) 的寬度。請確保有在 <code>&lt;label&gt;</code> 添加 <code>.col-form-label</code> ，使它們與相關的表單控制垂直置中</h6>
+
+<p>在以下 label 加入 col-form-label 使其對齊</p>
+
+<div class="demo">
+  <form>
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 練習">Email</label>
+      <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 練習">Password</label>
+      <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+      </div>
+    </div>
+    <fieldset class="row mb-3">
+      <legend class="練習 col-sm-2 pt-0">Radios</legend>
+      <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+        <label class="form-check-label" for="gridRadios1">
+        First radio
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+        <label class="form-check-label" for="gridRadios2">
+        Second radio
+        </label>
+      </div>
+      <div class="form-check disabled">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+        <label class="form-check-label" for="gridRadios3">
+        Third disabled radio
+        </label>
+      </div>
+      </div>
+    </fieldset>
+    <div class="row mb-3">
+      <div class="col-sm-10 offset-sm-2">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+        Example checkbox
+        </label>
+      </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+</div>
+
+<h2>水平表單標籤尺寸</h2>
+
+<p>使用 col-form-label-{ sm, lg } 改變標籤尺寸</p>
+
+<div class="demo">
+  <div class="row mb-3">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label 練習">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+    </div>
+  </div>
+  <div class="row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label 練習">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
+    </div>
+  </div>
+</div>
+
+<h2>欄尺寸</h2>
+
+<p>使用不同 col-{ 中斷點} 製作不同寬度 input</p>
+
+<div class="demo">
+  <div class="row g-3">
+    <div class="col-sm-7">
+      <input type="text" class="form-control" placeholder="City" aria-label="City">
+    </div>
+    <div class="練習">
+      <input type="text" class="form-control" placeholder="State" aria-label="State">
+    </div>
+    <div class="練習">
+      <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+    </div>
+  </div>
+</div>
+
+<h2>自動調整尺寸</h2>
+
+<p>使用 col-auto 符合 input 尺寸</p>
+
+<div class="demo">
+  <form class="row gy-2 gx-3 align-items-center">
+    <div class="練習">
+      <label class="visually-hidden" for="autoSizingInput">Name</label>
+      <input type="text" class="form-control" id="autoSizingInput" placeholder="Jane Doe">
+    </div>
+    <div class="練習">
+      <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+      <div class="input-group">
+      <div class="input-group-text">@</div>
+      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+      </div>
+    </div>
+    <div class="練習">
+      <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+      <select class="form-select" id="autoSizingSelect">
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="練習">
+      <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+      <label class="form-check-label" for="autoSizingCheck">
+        Remember me
+      </label>
+      </div>
+    </div>
+    <div class="練習">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+<h4>你可以再次將其與有指定大小的 column 類別混和使用</h4>
+
+<div class="demo">
+  <form class="row gx-3 gy-2 align-items-center">
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="specificSizeInputName">Name</label>
+      <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+      <div class="input-group">
+      <div class="input-group-text">@</div>
+      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+      <select class="form-select" id="specificSizeSelect">
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="col-auto">
+      <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+      <label class="form-check-label" for="autoSizingCheck2">
+        Remember me
+      </label>
+      </div>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+<h2>行內表單</h2>
+<h6>使用 <code>.row-cols-*</code> 類別來建立水平排版。</h6>
+
+<p>使用 .row-cols-lg-auto 來套用水平、垂直自動切換的排版形式</p>
+
+<div class="demo">
+  <form class="row 練習 g-3 align-items-center">
+    <div class="col-12">
+      <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+      <div class="input-group">
+      <div class="input-group-text">@</div>
+      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+      </div>
+    </div>
+    
+    <div class="col-12">
+      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+      <select class="form-select" id="inlineFormSelectPref">
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      </select>
+    </div>
+    
+    <div class="col-12">
+      <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+      <label class="form-check-label" for="inlineFormCheck">
+        Remember me
+      </label>
+      </div>
+    </div>
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+<!-- 🙇🙇練習結束🙇🙇 -->
+</main>
+</div>
+
+  <div class="btn-group position-fixed" style="top: 66px; right: 10px">
+  <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-list"></i> 選單
+  </button>
+  <ul class="dropdown-menu p-2 dropdown-menu-end" style="min-width: 200px;">
+    <div class="list-group overflow-auto" style="max-height: 500px;">
+    
+      <a href="/forms/accessibility.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        網頁親和性
+      </a>
+    
+      <a href="/forms/overview.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表單
+      </a>
+    
+      <a href="/forms/formControls.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        表單控制
+      </a>
+    
+      <a href="/forms/select.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        選擇功能表
+      </a>
+    
+      <a href="/forms/checksRadios.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        核取方塊和選項按鈕
+      </a>
+    
+      <a href="/forms/range.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        範圍
+      </a>
+    
+      <a href="/forms/inputGroup.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        Input 群組
+      </a>
+    
+      <a href="/forms/validation.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        驗證
+      </a>
+    
+      <a href="/forms/floatingLabels.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          ">
+        浮動標籤
+      </a>
+    
+      <a href="/forms/layout.html"
+        class="list-group-item list-group-item-action text-nowrap
+          
+          active">
+        排版
+      </a>
+    
+    </div>
+    <div class="mt-3 text-end p-2 bg-light rounded">
+      <small class="text-black-50 fw-light mb-0">文件版本：2025/03/18</small>
+    </div>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-bs5 shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Bootstrap 5 練習手冊</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="/content/typography.html">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/layout/breakpoint.html">Grid System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/utilities/background.html">Utilities / Helpers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/forms/accessibility.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/components/component-javascript-intro.html">Components</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/bs-javascript/js-intro.html">JavaScripts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/new-feature-5.3/component-placeholder.html">New Feature</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="footer py-2 bg-light">
+  <div class="container text-center">
+    <small class="text-black-50 fw-light mb-0">六角學院 Bootstrap 5 課程專屬文件</small>
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="/stylesheets/5.1/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</body>
+</html>
